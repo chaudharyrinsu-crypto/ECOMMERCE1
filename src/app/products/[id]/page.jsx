@@ -2,25 +2,27 @@
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import React from 'react'
+import React, { useState } from 'react'
 
 const page = () => {
     const params = useParams()
     const { id } = params
     const product = products.find(product => product.id.toString() === id)
+    const [selectedItem, setSelectedItem] = useState(product.items[0])
+    const [hexName, setHexName] = useState(product.items[0])
 
     return (
         <>
             <section className=' bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
                 <div className='h-full relative'>
-                    <img className='h-187.5 object-cover absolute -top-25' src={product.items[0].firstimg} alt={product.title} />
+                    <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
                     <div className='flex absolute top-100'>
-                        <img className='h-95 object-cover' src={product.items[0].secondimg} />
-                        <img className='h-95 object-cover' src={product.items[0].thirdimg} />
+                        <img className='h-95 object-cover' src={selectedItem.secondimg} />
+                        <img className='h-95 object-cover' src={selectedItem.thirdimg} />
                     </div>
                     <div className='flex absolute -bottom-15'>
-                        <img className='object-cover h-95' src={product.items[0].fourthimg} />
-                        <img className='h-95 object-cover' src={product.items[0].fifthimg} />
+                        <img className='object-cover h-95' src={selectedItem.fourthimg} />
+                        <img className='h-95 object-cover' src={selectedItem.fifthimg} />
                     </div>
                 </div>
                 {/* ***********************second white box*************************** */}
@@ -34,12 +36,12 @@ const page = () => {
                         <Link className='underline inline-block' href='/'>ALL</Link>
                         <Link className='inline-block' href='/'>LIMITED</Link>
                     </div>
-                    <span className='text-[#575757]'>{product.items[0].name}</span>
+                    <span className='text-[#575757]'>{hexName.name}</span>
                     <div className='grid grid-cols-5 gap-1 py-1'>
                         {product.items.map((img, index) => (
-                            <Link href='/' key={index} className='bg-[#F9F8F6] flex items-center justify-center'>
-                                <img className='h-15 object-contain' src={img.firstimg} alt="firstimg" />
-                            </Link>
+                            <button key={index} onClick={() => setSelectedItem(img)} onMouseEnter={() => setHexName(img)} className={`bg-[#F9F8F6] flex items-center justify-center ${selectedItem === img ? 'border-2 border-[#121212]' : 'border-none'} `}>
+                                <img className='h-15 object-contain cursor-pointer w-full' src={img.firstimg} alt="firstimg" />
+                            </button>
                         ))}
                     </div>
                     <div >
@@ -58,7 +60,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className='pb-12'>
-                        <Link href='/' className='inline-block bg-red-200 cursor-not-allowed w-full py-4 rounded-full text-sm text-center'>SELECT A SIZE</Link>
+                        <Link href='/' className='inline-block bg-[red-200] cursor-not-allowed w-full py-4 rounded-full text-sm text-center'>SELECT A SIZE</Link>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>
                         <span className='block'>Free Shipping on Orders over $75</span>
