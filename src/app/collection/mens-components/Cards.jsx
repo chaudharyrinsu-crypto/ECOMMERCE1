@@ -17,22 +17,22 @@ const Cards = () => {
                             <Link href={`/products/${item.id}`} className='block'>
                                 <div className='bg-[#E0DACF] absolute top-4 left-4 px-2 py-1 rounded-2xl flex items-center justify-center text-[12px]'>NEW</div>
                                 <img
-                                    src={item.colors[0].images[0].mainimg}
+                                    src={item.items[0].firstimg}
                                     alt={item.title}
                                     className='w-full object-contain h-75'
                                 />
                                 <Link href='/' className='font-semibold'>{item.title}</Link>
-                                <Link href='/' className='text-sm inline-block mt-1.5'>{item.colors[0].name}</Link>
+                                <Link href='/' className='text-sm inline-block mt-1.5'>{item.items[0].name}</Link>
                                 <div className='flex gap-2 justify-between mt-1.5'>
                                     <div className='flex gap-2'>
-                                        {item.colors.slice(0, 5).map((color, index) => (
+                                        {item.items.slice(0, 5).map((color, index) => (
                                             <Link href='/' key={index}
                                                 style={{ backgroundColor: color.hex }}
                                                 className='h-6 w-6 rounded-full inline-block border'
                                             ></Link>
                                         ))}
-                                        {item.colors.length > 5 && (
-                                            <Link href='/' className='underline'>+{item.colors.length - 5}</Link>
+                                        {item.items.length > 5 && (
+                                            <Link href='/' className='underline'>+{item.items.length - 5}</Link>
                                         )}
                                     </div>
                                     <span className='text-sm font-semibold'>{item.price}</span>
