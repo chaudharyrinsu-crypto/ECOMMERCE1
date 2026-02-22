@@ -10,6 +10,7 @@ const page = () => {
     const product = products.find(product => product.id.toString() === id)
     const [selectedItem, setSelectedItem] = useState(product.items[0])
     const [hexName, setHexName] = useState(product.items[0])
+    const [selectSize, setSelectSize] = useState(null)
 
     return (
         <>
@@ -51,7 +52,7 @@ const page = () => {
                         </div>
                         <div className='grid grid-cols-7 gap-2 py-4'>
                             {product.sizes.map((size, index) => (
-                                <Link href='/' key={index} className='border border-[#E0DACF] flex items-center justify-center text-sm p-3 tracking-tighter cursor-pointer'>{size}</Link>
+                                <button key={index} onClick={() => setSelectSize(size)} className={` flex items-center justify-center text-sm p-3 tracking-tighter cursor-pointer ${selectSize === size ? 'bg-[#121212] border-none text-white' : 'border border-[#E0DACF]'}`}>{size}</button>
                             ))}
                         </div>
                         <div className='text-[#575757] pb-6 text-sm'>
@@ -60,7 +61,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className='pb-12'>
-                        <Link href='/' className='inline-block bg-[red-200] cursor-not-allowed w-full py-4 rounded-full text-sm text-center'>SELECT A SIZE</Link>
+                        <Link href='/' className={`inline-block w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize?'ADD TO CART -':'SELECT A SIZE'} {selectSize && product.price}</Link>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>
                         <span className='block'>Free Shipping on Orders over $75</span>
