@@ -2,7 +2,7 @@
 import React from 'react'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
-import Nav from '../mens-components/Nav'
+import Nav from '../mens-new-arrivals-components/Nav'
 
 const Cards = () => {
     return (

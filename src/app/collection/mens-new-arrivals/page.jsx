@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from '../mens-components/Hero'
-import Cards from '../mens-components/Cards'
+import Hero from '../mens-new-arrivals-components/Hero'
+import Cards from '../mens-new-arrivals-components/Cards'
 
 const page = () => {
   return (

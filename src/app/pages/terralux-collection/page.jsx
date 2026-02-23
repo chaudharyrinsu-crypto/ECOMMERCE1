@@ -1,4 +1,5 @@
 import About from '@/app/terralux-collection-components/About'
+import AboutHeading from '@/app/terralux-collection-components/AboutHeading'
 import Card from '@/app/terralux-collection-components/Card'
 import Collection from '@/app/terralux-collection-components/Collection'
 import Features from '@/app/terralux-collection-components/Features'
@@ -13,6 +14,7 @@ const page = () => {
       <Collection/>
       <Features/>
       <Slider/>
+      <AboutHeading/>
       <About/>
       <Card/>
     </section>

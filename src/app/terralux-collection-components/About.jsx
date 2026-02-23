@@ -4,13 +4,7 @@ import React from 'react'
 const About = () => {
     return (
         <section className='w-full h-full text-[#212121]'>
-            <div className='flex flex-col gap-5 text-center'>
-                <h2 className='text-3xl md:text-4xl'>Runner NZ Terralux™</h2>
-                <span className='text-sm'>Toasted Coconut (Natural White Sole) - $135</span>
-                <div className='inline-block space-x-3 uppercase text-sm font-medium'>
-                    <Link className='px-5 inline-block text-center md:py-2 py-1 rounded-4xl border border-[#212121] hover:bg-[#212121] hover:text-white duration-500' href='/'>Shop men</Link>
-                </div>
-            </div>
+            
             <p className='text-center py-5 md:py-10 text-3xl md:text-4xl md:px-0 px-10'>You Won't Believe It's Not Leather.</p>
             <div className='block space-y-2.5 md:space-y-0 md:flex gap-2.5 md:py-0 py-5'>
                 <img className='md:w-[55%] w-full rounded-2xl' src="https://www.allbirds.com/cdn/shop/files/26Q1-Terralux_LP_Cruiser_Split-Text_AssetName_Desktop-Mobile_2x3-2.jpg?v=1769734437&width=1920" alt="aboutimg" />

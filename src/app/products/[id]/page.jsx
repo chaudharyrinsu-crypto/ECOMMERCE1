@@ -1,8 +1,9 @@
 'use client'
+// import PageSecondBox from '@/app/collection/mens-components/PageSecondBox'
 import { products } from '@/app/data/Alldata'
-import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 const page = () => {
     const params = useParams()
@@ -14,8 +15,8 @@ const page = () => {
 
     return (
         <>
-            <section className=' bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
-                <div className='h-full relative'>
+            <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
+                <div className='h-full relative grid grid-rows-2'>
                     <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
                     <div className='flex absolute top-100'>
                         <img className='h-95 object-cover' src={selectedItem.secondimg} />
@@ -27,6 +28,8 @@ const page = () => {
                     </div>
                 </div>
                 {/* ***********************second white box*************************** */}
+                {/* <PageSecondBox product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} hexName={hexName} setHexName={setHexName} /> */}
+
                 <div className='absolute bg-white top-25 right-5 w-[40%] p-8 rounded-xl'>
                     <div>
                         <p className='text-3xl'>{product.title}</p>
@@ -61,7 +64,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className='pb-12'>
-                        <Link href='/' className={`inline-block w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize?'ADD TO CART -':'SELECT A SIZE'} {selectSize && product.price}</Link>
+                        <Link href='/' className={`inline-block w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</Link>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>
                         <span className='block'>Free Shipping on Orders over $75</span>
