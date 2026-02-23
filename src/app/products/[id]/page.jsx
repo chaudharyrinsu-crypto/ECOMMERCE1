@@ -4,6 +4,9 @@ import { products } from '@/app/data/Alldata'
 import { useParams } from 'next/navigation'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Decription from '@/app/collection/mens-new-arrivals-components/Decription'
+import About from '@/app/terralux-collection-components/About'
+import Features from '@/app/collection/mens-new-arrivals-components/Features'
 
 const page = () => {
     const params = useParams()
@@ -71,6 +74,17 @@ const page = () => {
                         <span>Easy Returns</span>
                     </div>
                 </div>
+            </section>
+            <section className='px-3 bg-[#ECE9E2]'>
+                {product.title.toLowerCase().includes('terralux') && (
+                    <>
+                        <Decription />
+                        <About />
+                    </>
+                )}
+            </section>
+            <section>
+                <Features product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
             </section>
         </>
     )
