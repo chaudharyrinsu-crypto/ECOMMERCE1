@@ -1,19 +1,19 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import 'swiper/css/navigation'
 import { useRef, useState } from 'react'
 
 // Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { newArrivashoeItem, products } from '../data/Alldata'
 import Link from 'next/link'
 import { LiaAngleLeftSolid } from "react-icons/lia";
 import { LiaAngleRightSolid  } from "react-icons/lia";
+import { products } from '@/app/data/Alldata'
 
-const NewArrivalitems = () => {
+const YouMayLikeItem = () => {
     const prevRef = useRef(null)
     const nextRef = useRef(null)
     const [isBeginning, setIsBeginning] = useState(true)
@@ -21,9 +21,10 @@ const NewArrivalitems = () => {
     
     return (
         <>
-            <section className='px-3 text-sm w-full relative md:py-12 '>
+            <section className='px-3 text-sm w-full relative py-10'>
+                <h4 className='uppercase font-medium tracking-wide py-3 px-5 text-[18px]'>You May Also Like</h4>
                 {/* Custom navigation buttons */}
-                <div className="absolute top-0 right-3 z-10 md:flex hidden gap-2 text-[18px]">
+                <div className="absolute top-12 right-3 z-10 md:flex hidden gap-2 text-[18px]">
                     <button ref={prevRef} disabled={isBeginning} className={`h-9 w-9 rounded-full cursor-pointer flex items-center justify-center shadow ${isBeginning ? 'border border-gray-400 text-gray-400' : 'border border-[#212121] text-[#212121]'}`}>
                         <LiaAngleLeftSolid  />
                     </button>
@@ -68,13 +69,14 @@ const NewArrivalitems = () => {
                     }}
                     className="w-full h-full new-arrival-swiper "
                 >
-                    {products.map((item, i) => (
+                    {products.slice(0,12).map((item, i) => (
                         // newArrivashoeItem
                         <SwiperSlide
                             key={i}
                             className="flex items-center justify-center bg-white rounded-2xl py-5 "
                         >
-                            <Link href='/' className=' '>
+                            {item.gender==='men' && (
+                                 <Link href={`/products/${item.id}`} className=' '>
                                 <img className='object-cover h-full w-full' src={item.items[0].firstimg} alt="images" />
                                 <div className='px-5 space-y-2'>
                                     <p className='uppercase text-[14px]'>{item.title}</p>
@@ -85,6 +87,8 @@ const NewArrivalitems = () => {
                                     </div>
                                 </div>
                             </Link>
+                            )}
+                           
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -107,4 +111,4 @@ const NewArrivalitems = () => {
     )
 }
 
-export default NewArrivalitems
+export default YouMayLikeItem

@@ -7,6 +7,8 @@ import Link from 'next/link'
 import Decription from '@/app/collection/mens-new-arrivals-components/Decription'
 import About from '@/app/terralux-collection-components/About'
 import Features from '@/app/collection/mens-new-arrivals-components/Features'
+import YouMayLikeItem from '@/app/collection/mens-new-arrivals-components/YouMayLikeItem'
+import BigImg from '@/app/collection/mens-new-arrivals-components/BigImg'
 
 const page = () => {
     const params = useParams()
@@ -83,9 +85,15 @@ const page = () => {
                     </>
                 )}
             </section>
-            <section>
-                <Features product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
+            <section className='bg-[#ECE9E2]'>
+                <>
+                    <Features product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
+                    <YouMayLikeItem />
+                    <BigImg/>
+                </>
+
             </section>
+
         </>
     )
 }
