@@ -2,13 +2,16 @@
 // import PageSecondBox from '@/app/collection/mens-components/PageSecondBox'
 import { products } from '@/app/data/Alldata'
 import { useParams } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Link from 'next/link'
 import Decription from '@/app/collection/mens-new-arrivals-components/Decription'
 import About from '@/app/terralux-collection-components/About'
 import Features from '@/app/collection/mens-new-arrivals-components/Features'
 import YouMayLikeItem from '@/app/collection/mens-new-arrivals-components/YouMayLikeItem'
 import BigImg from '@/app/collection/mens-new-arrivals-components/BigImg'
+import { CartContext } from '@/app/context/CartContext'
+import { useRouter } from 'next/navigation'
+
 
 const page = () => {
     const params = useParams()
@@ -17,6 +20,8 @@ const page = () => {
     const [selectedItem, setSelectedItem] = useState(product.items[0])
     const [hexName, setHexName] = useState(product.items[0])
     const [selectSize, setSelectSize] = useState(null)
+    const { state, dispatch } = useContext(CartContext)
+    const router = useRouter()
 
     return (
         <>
@@ -69,7 +74,19 @@ const page = () => {
                         </div>
                     </div>
                     <div className='pb-12'>
-                        <button className={`w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</button>
+                        <button onClick={() => {
+                            dispatch({
+                                type: "ADD_TO_CART",
+                                payload: {
+                                    id: product.id,
+                                    name: product.name,
+                                    price: product.price,
+                                    sizes: selectSize,
+                                }
+                            })
+
+                            router.push('/cart')   //navigate to cart page
+                        }} className={`w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</button>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>
                         <span className='block'>Free Shipping on Orders over $75</span>
@@ -89,7 +106,7 @@ const page = () => {
                 <>
                     <Features product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
                     <YouMayLikeItem />
-                    <BigImg/>
+                    <BigImg />
                 </>
 
             </section>

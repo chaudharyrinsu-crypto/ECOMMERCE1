@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
+import { CartProvider } from "./context/CartContext";
 
 const styleScript = Style_Script({
   subsets: ['latin'],
@@ -28,10 +29,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${styleScript.variable} antialiased text-[#212121] bg-[#ECE9E2] `}>
-        <Header/>
-        {children}
-        <Features/>
-        <Footer/>
+        <CartProvider>
+          <Header />
+          {children}
+          <Features />
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
