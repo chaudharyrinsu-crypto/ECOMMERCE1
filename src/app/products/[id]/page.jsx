@@ -9,7 +9,6 @@ import About from '@/app/terralux-collection-components/About'
 import Features from '@/app/collection/mens-new-arrivals-components/Features'
 import YouMayLikeItem from '@/app/collection/mens-new-arrivals-components/YouMayLikeItem'
 import BigImg from '@/app/collection/mens-new-arrivals-components/BigImg'
-import Cart from '@/app/components/Cart'
 
 const page = () => {
     const params = useParams()
@@ -21,7 +20,6 @@ const page = () => {
 
     return (
         <>
-        <Cart/>
             <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
                 <div className='h-full relative grid grid-rows-2'>
                     <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
@@ -71,7 +69,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className='pb-12'>
-                        <Link href='/' className={`inline-block w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</Link>
+                        <button className={`w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</button>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>
                         <span className='block'>Free Shipping on Orders over $75</span>
