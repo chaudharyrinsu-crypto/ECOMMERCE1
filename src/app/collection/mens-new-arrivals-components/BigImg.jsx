@@ -12,7 +12,7 @@ const BigImg = () => {
                             <div className='text-center space-y-4 border border-white p-25 rounded-full'>
                                 <h5 className='text-2xl'>Better Things in a Better Way</h5>
                                 <p className='text-sm'>Looking to the world's greatest innovator - Nature</p>
-                                <Link className='bg-white text-[12px] tracking-wide text-[#121212] px-4 py-1.5 rounded-2xl uppercase inline-block duration-200 hover:bg-[#121212] hover:text-white' href='/'>Learn More</Link>
+                                <Link className='bg-white text-[12px] tracking-wide text-[#212121] px-4 py-1.5 rounded-2xl uppercase inline-block duration-200 hover:bg-[#212121] hover:text-white' href='/'>Learn More</Link>
                             </div>
                         </div>
                     </div>

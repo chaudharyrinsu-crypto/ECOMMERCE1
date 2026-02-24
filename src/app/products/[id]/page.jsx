@@ -9,6 +9,7 @@ import About from '@/app/terralux-collection-components/About'
 import Features from '@/app/collection/mens-new-arrivals-components/Features'
 import YouMayLikeItem from '@/app/collection/mens-new-arrivals-components/YouMayLikeItem'
 import BigImg from '@/app/collection/mens-new-arrivals-components/BigImg'
+import Cart from '@/app/components/Cart'
 
 const page = () => {
     const params = useParams()
@@ -20,6 +21,7 @@ const page = () => {
 
     return (
         <>
+        <Cart/>
             <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
                 <div className='h-full relative grid grid-rows-2'>
                     <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
@@ -93,7 +95,6 @@ const page = () => {
                 </>
 
             </section>
-
         </>
     )
 }

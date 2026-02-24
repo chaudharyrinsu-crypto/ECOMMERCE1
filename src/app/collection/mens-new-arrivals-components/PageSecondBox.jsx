@@ -23,7 +23,7 @@ const PageSecondBox = ({ product,
                 <span className='text-[#575757]'>{hexName.name}</span>
                 <div className='grid grid-cols-5 gap-1 py-1'>
                     {product.items.map((img, index) => (
-                        <button key={index} onClick={() => setSelectedItem(img)} onMouseEnter={() => setHexName(img)} className={`bg-[#F9F8F6] flex items-center justify-center ${selectedItem === img ? 'border-2 border-[#121212]' : 'border-none'} `}>
+                        <button key={index} onClick={() => setSelectedItem(img)} onMouseEnter={() => setHexName(img)} className={`bg-[#F9F8F6] flex items-center justify-center ${selectedItem === img ? 'border-2 border-[#212121]' : 'border-none'} `}>
                             <img className='h-15 object-contain cursor-pointer w-full' src={img.firstimg} alt="firstimg" />
                         </button>
                     ))}
@@ -35,7 +35,7 @@ const PageSecondBox = ({ product,
                     </div>
                     <div className='grid grid-cols-7 gap-2 py-4'>
                         {product.sizes.map((size, index) => (
-                            <button key={index} onClick={() => setSelectSize(size)} className={` flex items-center justify-center text-sm p-3 tracking-tighter cursor-pointer ${selectSize === size ? 'bg-[#121212] border-none text-white' : 'border border-[#E0DACF]'}`}>{size}</button>
+                            <button key={index} onClick={() => setSelectSize(size)} className={` flex items-center justify-center text-sm p-3 tracking-tighter cursor-pointer ${selectSize === size ? 'bg-[#212121] border-none text-white' : 'border border-[#E0DACF]'}`}>{size}</button>
                         ))}
                     </div>
                     <div className='text-[#575757] pb-6 text-sm'>
@@ -44,7 +44,7 @@ const PageSecondBox = ({ product,
                     </div>
                 </div>
                 <div className='pb-12'>
-                    <Link href='/' className={`inline-block w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</Link>
+                    <Link href='/' className={`inline-block w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#212121] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</Link>
                 </div>
                 <div className='text-[#575757] text-sm text-center'>
                     <span className='block'>Free Shipping on Orders over $75</span>

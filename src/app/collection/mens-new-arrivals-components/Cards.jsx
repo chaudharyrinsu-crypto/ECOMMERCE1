@@ -8,7 +8,7 @@ const Cards = () => {
     return (
         <section className='py-2.5'>
             <Nav />
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2.5 max-w-6xl mx-auto px-4 py-3.5 tracking-wider'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 max-w-6xl mx-auto px-4 py-3.5 tracking-wider'>
                 {products
                     .filter(i => i.gender === 'men' || i.gender === 'unisex')
                     .map(item => (
