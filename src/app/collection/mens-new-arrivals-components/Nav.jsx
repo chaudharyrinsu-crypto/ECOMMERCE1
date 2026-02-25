@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { RiArrowDownSLine } from "react-icons/ri";

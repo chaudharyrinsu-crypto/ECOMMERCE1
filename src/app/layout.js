@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
+import Cart from "./components/Cart";
 
 const styleScript = Style_Script({
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} ${styleScript.variable} antialiased text-[#212121] bg-[#ECE9E2] `}>
         <CartProvider>
           <Header />
+          <Cart/>
           {children}
           <Features />
           <Footer />

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Hero from '../women-components/Hero'
 import Cards from '../women-components/Cards'

@@ -12,8 +12,8 @@ const Cards = () => {
              <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2.5 max-w-6xl mx-auto px-4 py-3.5 tracking-wider'>
                 {products
                     .filter(i => i.gender === 'women' || i.gender === 'unisex')
-                    .map(item => (
-                        <div key={item.id} className='bg-white rounded-2xl p-4 relative hover:z-50 hover:scale-[1.055] hover:shadow-xl duration-200 group'>
+                    .map((item,index) => (
+                        <div key={index} className='bg-white rounded-2xl p-4 relative hover:z-50 hover:scale-[1.055] hover:shadow-xl duration-200 group'>
                             <Link href={`/products/${item.id}`} className='block'>
                                 <div className='bg-[#E0DACF] absolute top-4 left-4 px-2 py-1 rounded-2xl flex items-center justify-center text-[12px]'>NEW</div>
                                 <img

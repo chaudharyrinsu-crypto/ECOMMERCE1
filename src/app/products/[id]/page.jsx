@@ -10,7 +10,6 @@ import Features from '@/app/collection/mens-new-arrivals-components/Features'
 import YouMayLikeItem from '@/app/collection/mens-new-arrivals-components/YouMayLikeItem'
 import BigImg from '@/app/collection/mens-new-arrivals-components/BigImg'
 import { CartContext } from '@/app/context/CartContext'
-import { useRouter } from 'next/navigation'
 
 
 const page = () => {
@@ -21,7 +20,6 @@ const page = () => {
     const [hexName, setHexName] = useState(product.items[0])
     const [selectSize, setSelectSize] = useState(null)
     const { state, dispatch } = useContext(CartContext)
-    const router = useRouter()
 
     return (
         <>
@@ -79,13 +77,14 @@ const page = () => {
                                 type: "ADD_TO_CART",
                                 payload: {
                                     id: product.id,
-                                    name: product.name,
+                                    name: product.title,
                                     price: product.price,
-                                    sizes: selectSize,
+                                    size: selectSize,
+                                    color:selectedItem.name,
+                                    image:selectedItem.firstimg
                                 }
                             })
-
-                            router.push('/cart')   //navigate to cart page
+                            dispatch({type:'OPEN_CART'})
                         }} className={`w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</button>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>

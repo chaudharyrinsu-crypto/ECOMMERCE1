@@ -16,8 +16,8 @@ const TreeRunnerNZ = () => {
                     </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 h-160 w-full py-10'>
-                    {treeRunnerNZ.map(item => (
-                        <div key={item} className='h-full w-full rounded-2xl overflow-hidden relative group'>
+                    {treeRunnerNZ.map((item,index) => (
+                        <div key={index} className='h-full w-full rounded-2xl overflow-hidden relative group'>
                             <img className='object-cover h-full w-full group-hover:scale-[1.1] duration-900' src={item.image} alt="tree runner images" />
                             <p className='text-4xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-extralight whitespace-nowrap'>{item.title}</p>
                             <div className='absolute left-1/2 -translate-x-1/2 bottom-7 whitespace-nowrap space-x-3 uppercase text-sm font-medium'>

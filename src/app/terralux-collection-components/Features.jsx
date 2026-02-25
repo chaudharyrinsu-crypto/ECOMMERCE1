@@ -15,8 +15,8 @@ const Features = () => {
           className="rounded-3xl h-full object-cover"
         />
         <div className='grid grid-rows-3 items-center gap-1 md:gap-0 rounded-2xl'>
-          {terraluxShoeFeatures.map(item => (
-            <div key={item.heading} className='space-y-2.5 md:space-y-1 lg:space-y-3 tracking-wide font-normal'>
+          {terraluxShoeFeatures.map((item,index) => (
+            <div key={index} className='space-y-2.5 md:space-y-1 lg:space-y-3 tracking-wide font-normal'>
               <h6 className='text-sm lg:text-[16px]'>{item.heading}</h6>
               <p className='text-[12px] md:text-sm font-normal text-[#575757] leading-6'>{item.description}</p>
             </div>

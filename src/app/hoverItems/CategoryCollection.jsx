@@ -33,8 +33,8 @@ const CategoryCollection = () => {
             </div>
             <div className='py-2'>
                  <h5 className='mt-6 uppercase font-medium'>Customer Favorites</h5>
-                {customerFavorites.map(a=>(
-                    <Link className='text-[#575757] flex mt-3 hover:underline' key={a} href='/'>{a}</Link>
+                {customerFavorites.map((a,index)=>(
+                    <Link className='text-[#575757] flex mt-3 hover:underline' key={index} href='/'>{a}</Link>
                 ))}
             </div>
             <div className='py-2'>

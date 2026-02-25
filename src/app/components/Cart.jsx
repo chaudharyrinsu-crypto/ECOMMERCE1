@@ -5,40 +5,77 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const Cart = () => {
-    const [hide,setHide]=useState(null)
+    const [hide, setHide] = useState(null)
+    const { state, dispatch } = useContext(CartContext)
     return (
         <>
             <section className='relative z-50 tracking-wide'>
-                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white ${hide?" translate-x-full":"translate-x-0"} transform transition-transform  duration-500 ease-in-out`}>
+                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white ${state.cartOpen ? " translate-x-0" : "translate-x-full"} transform transition-transform  duration-900 ease-in-out`}>
                     <div className=' px-3'>
                         <ul className='py-5 after:content-[""] relative after:absolute after:bg-[#212121] after:h-1.75 after:w-full after:bottom-0 after:rounded-full after:left-1/2 after:-translate-x-1/2 flex justify-between'>
                             <li className='text-[12px]'>CART</li>
                             <li className='text-sm text-[#575757]'>You've earned free shipping!</li>
-                            <li onClick={()=>setHide(true)} className='cursor-pointer'><RxCross1 /></li>
+                            <li onClick={() => dispatch({ type: 'CLOSE_CART' })} className='cursor-pointer'><RxCross1 /></li>
                         </ul>
                         <div className=''>
-                            <div className='flex justify-between items-center py-3 '>
-                                <div className='flex gap-5 '>
-                                    <img className='h-20' src="https://cdn.shopify.com/s/files/1/1104/4168/files/A12464_26Q1_Dasher-NZ-Blizzard-Deep-Navy-Blizzard_PDP_LEFT.png?v=1768948183" alt="" />
-                                    <div className='text-sm space-y-1'>
-                                        <p className='uppercase'>Men's Dasher NZ</p>
-                                        <span className='block text-[12px] text-[#575757]'>Blizzard/Deep Navy (Blizzard Sole)</span>
-                                        <span className='block text-[12px] text-[#575757]'>Size: 8</span>
-                                        <button className='underline text-[12px] text-[#575757]'>Remove</button>
+                            {state.cart.map((item, index) => (
+                                <div key={index} className='flex justify-between items-center py-3 '>
+                                    <div className='flex gap-5 '>
+                                        <img className='h-20' src={item.image} alt="" />
+                                        <div className='text-sm space-y-1'>
+                                            <p className='uppercase'>{item.title}</p>
+                                            <span className='block text-[12px] text-[#575757]'>{item.color}</span>
+                                            <span className='block text-[12px] text-[#575757]'>Size: {item.size}</span>
+                                            <button onClick={() =>
+                                                dispatch({
+                                                    type: 'REMOVE_FROM_CART',
+                                                    payload: {
+                                                        id: item.id,
+                                                        size: item.size,
+                                                        color: item.color
+                                                    }
+                                                })
+                                            } className='underline text-[12px] text-[#575757] cursor-pointer'>Remove</button>
+                                        </div>
+                                    </div>
+                                    <div className='text-sm flex flex-col gap-6 text-end'>
+                                        <span className='font-semibold'>$140</span>
+                                        <ul className='flex justify-between gap-2.5 items-center border border-[#CDCDCD] px-3.5 py-1 rounded-2xl font-semibold'>
+                                            <li onClick={()=>dispatch({type:'REMOVE_FROM_CART',payload:{
+                                                id:item.id,
+                                                size:item.size,
+                                                color:item.color
+                                            }})} className='cursor-pointer'><RiDeleteBinLine /></li>
+                                            <li onClick={() =>
+                                                dispatch({
+                                                    type: "DECREMENT_QUANTITY",
+                                                    payload: {
+                                                        id: item.id,
+                                                        size: item.size,
+                                                        color: item.color
+                                                    }
+                                                })
+                                            } className='cursor-pointer'>-</li>
+                                            <li>{item.quantity}</li>
+                                            <li onClick={() => {
+                                                dispatch({
+                                                    type: 'INCREMENT_QUANTITY', payload: {
+                                                        id: item.id,
+                                                        color: item.color,
+                                                        size: item.size
+                                                    }
+                                                })
+                                            }} className='cursor-pointer'>+</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div className='text-sm flex flex-col gap-6 text-end'>
-                                    <span className='font-semibold'>$140</span>
-                                    <ul className='flex justify-between gap-2.5 items-center border border-[#CDCDCD] px-3.5 py-1 rounded-2xl font-semibold'>
-                                        <li><RiDeleteBinLine /></li>
-                                        <li>1</li>
-                                        <li>+</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            ))
+
+                            }
                         </div>
                         <div className='py-2 border-b-1 border-t-1 border-t-[#CDCDCD] border-b-[#CDCDCD]'>
                             <div className='bg-[#ECE9E2] py-2 px-3 rounded-xl'>

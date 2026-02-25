@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 
-const Features = ({ selectedItem, setSelectedItem }) => {
+const Features = () => {
+    // { selectedItem, setSelectedItem }
     return (
         <>
             <div className='px-3 '>

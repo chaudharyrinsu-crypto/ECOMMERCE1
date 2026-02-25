@@ -33,7 +33,7 @@ const Header = () => {
                     <div className='text-[18px] md:flex gap-5  hidden'>
                         <Link className='text-[14px]' href='/'>About</Link>
                         <Link href='/'><IoSearchOutline /></Link>
-                        <Link className='relative' href='/'><BsMinecart />{state.cart.length > 0 && (
+                        <Link onClick={()=>dispatch({type:'OPEN_CART'})} className='relative' href='/'><BsMinecart />{state.cart.length > 0 && (
                             <span className='absolute -top-2 -right-3 h-4 w-4 bg-[#212121] text-white rounded-full flex items-center justify-center text-[10px]'>{state.cart.length}</span>
                         )}</Link>
                     </div>
