@@ -1,12 +1,17 @@
 'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import FooterIcons from './FooterIcons'
+import { LuPlus } from "react-icons/lu";
+import { LuMinus } from "react-icons/lu";
 
 const Footer = () => {
+  const [hideList1, SetHideList1] = useState(true)
+  const [hideList2, SetHideList2] = useState(true)
+  const [hideList3, SetHideList3] = useState(true)
   return (
     <>
-      <footer className='bg-[#212121] text-white px-10 py-20 tracking-wider font-normal text-[12px]'>
+      <footer className='bg-[#212121] text-white px-10 pt-20 tracking-wider font-normal text-[12px]'>
         <section className='flex justify-between '>
           <div className='max-w-[600px] flex flex-col gap-8'>
             <p className='font-medium uppercase'>Subscribe to our emails</p>
@@ -17,9 +22,12 @@ const Footer = () => {
           </div>
           <div className='flex justify-between gap-20'>
             <div className='flex justify-between gap-8'>
-              <div className='flex flex-col gap-8'>
-                <p className='uppercase'>Help</p>
-                <ul className='space-y-5'>
+              <div className={`flex flex-col gap-8 border-b border-white/30 md:border-b-none`}>
+                <div className='flex justify-between'>
+                  <p className='uppercase'>Help</p>
+                  <div onClick={() => SetHideList1(!hideList1)} className='text-[18px] md:hidden block'>{hideList1 ? <LuPlus /> : <LuMinus />}</div>
+                </div>
+                <ul className={`space-y-5 ${hideList1 ? 'hidden' : 'block'} md:block`}>
                   <li><Link href={'/'}>Live Chat</Link></li>
                   <li><Link href={'/'}>Call Us</Link></li>
                   <li><Link href={'/'}>Text Us</Link></li>
@@ -28,9 +36,12 @@ const Footer = () => {
                   <li><Link href={'/'}>Returns/Exchanges</Link></li>
                 </ul>
               </div>
-              <div className='flex flex-col gap-8'>
-                <p className='uppercase'>Shop</p>
-                <ul className='space-y-5'>
+              <div className='flex flex-col gap-8 border-b border-white/30 md:border-b-none'>
+                <div className='flex justify-between'>
+                  <p className='uppercase'>Shop</p>
+                  <div onClick={() => SetHideList2(!hideList2)} className='text-[18px] md:hidden block'>{hideList2 ? <LuPlus /> : <LuMinus />}</div>
+                </div>
+                <ul className={`space-y-5 ${hideList2 ? 'hidden' : 'block'} md:block `}>
                   <li><Link href={'/'}>Men's Shoes</Link> </li>
                   <li><Link href={'/'}>Women's Shoes</Link> </li>
                   <li><Link href={'/'}>Men's Apparel</Link> </li>
@@ -40,9 +51,12 @@ const Footer = () => {
                   <li><Link href={'/'}>Refer a Friend</Link> </li>
                 </ul>
               </div>
-              <div className='flex flex-col gap-8'>
-                <p className='uppercase'>Company</p>
-                <ul className='space-y-5'>
+              <div className='flex flex-col gap-8 border-b border-white/30 md:border-b-none'>
+                <div className='flex justify-between'>
+                  <p className='uppercase'>Company</p>
+                  <div onClick={() => SetHideList3(!hideList3)} className='text-[18px] md:hidden block'>{hideList3 ? <LuPlus /> : <LuMinus />}</div>
+                </div>
+                <ul className={`space-y-5 ${hideList3 ? 'hidden' : 'block'} md:block`}>
                   <li><Link href={'/'}>Our Stores</Link> </li>
                   <li><Link href={'/'}>Our Story</Link> </li>
                   <li><Link href={'/'}>Our Materials</Link> </li>
@@ -70,7 +84,7 @@ const Footer = () => {
           </div>
         </section>
         <section>
-         <FooterIcons/>
+          <FooterIcons />
         </section>
       </footer>
     </>
