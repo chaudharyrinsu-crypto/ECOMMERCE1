@@ -14,7 +14,7 @@ const Cart = () => {
     return (
         <>
             <section className='relative z-50 tracking-wide'>
-                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white ${state.cartOpen ? " translate-x-0" : "translate-x-full"} transform transition-transform  duration-900 ease-in-out`}>
+                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white shadow ${state.cartOpen ? " translate-x-0" : "translate-x-full"} transform transition-transform  duration-900 ease-in-out`}>
                     <div className=' px-3'>
                         <ul className='py-5 after:content-[""] relative after:absolute after:bg-[#212121] after:h-1.75 after:w-full after:bottom-0 after:rounded-full after:left-1/2 after:-translate-x-1/2 flex justify-between'>
                             <li className='text-[12px]'>CART</li>
@@ -93,7 +93,7 @@ const Cart = () => {
                         <div className='bg-[#ECE9E2] p-3'>
                             <div className='flex justify-between'>
                                 <p className='text-sm'>Recommended for you</p>
-                                <div className={`h-5.5 w-5.5 flex items-center justify-center rounded-full border`}><MdKeyboardArrowDown /></div>
+                                <div className={`h-5.5 w-5.5 flex items-center justify-center rounded-full border cursor-pointer`}><MdKeyboardArrowDown /></div>
                             </div>
                             <div className='p-2'>
                                 <div className='flex gap-5 text-sm bg-white p-2 rounded-xl'>
@@ -119,8 +119,8 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div className='flex justify-end gap-2'>
-                                <span className='h-5.5 w-5.5 flex items-center justify-center rounded-full border'><MdKeyboardArrowLeft /></span>
-                                <span className='h-5.5 w-5.5 flex items-center justify-center rounded-full border'><MdKeyboardArrowRight /></span>
+                                <span className='h-5.5 w-5.5 flex items-center justify-center rounded-full border cursor-pointer'><MdKeyboardArrowLeft /></span>
+                                <span className='h-5.5 w-5.5 flex items-center justify-center rounded-full border cursor-pointer'><MdKeyboardArrowRight /></span>
                             </div>
                         </div>
                     </div>
