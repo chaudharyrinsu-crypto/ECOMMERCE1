@@ -10,6 +10,7 @@ import Features from '@/app/collection/mens-new-arrivals-components/Features'
 import YouMayLikeItem from '@/app/collection/mens-new-arrivals-components/YouMayLikeItem'
 import BigImg from '@/app/collection/mens-new-arrivals-components/BigImg'
 import { CartContext } from '@/app/context/CartContext'
+import MobileResponsiveProduct from '@/app/responsive/MobileResponsiveProduct'
 
 
 const page = () => {
@@ -24,7 +25,7 @@ const page = () => {
     return (
         <>
             <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
-                <div className='h-full relative grid grid-rows-2'>
+                <div className=' md:relative md:block h-full'>
                     <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
                     <div className='flex absolute top-100'>
                         <img className='h-95 object-cover' src={selectedItem.secondimg} />
@@ -34,6 +35,11 @@ const page = () => {
                         <img className='object-cover h-95' src={selectedItem.fourthimg} />
                         <img className='h-95 object-cover' src={selectedItem.fifthimg} />
                     </div>
+                </div>
+
+                {/* for mobile */}
+                <div className='md:hidden block'>
+                    <MobileResponsiveProduct selectedItem={selectedItem} product={product} />
                 </div>
                 {/* ***********************second white box*************************** */}
                 {/* <PageSecondBox product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} hexName={hexName} setHexName={setHexName} /> */}
@@ -80,11 +86,11 @@ const page = () => {
                                     name: product.title,
                                     price: product.price,
                                     size: selectSize,
-                                    color:selectedItem.name,
-                                    image:selectedItem.firstimg
+                                    color: selectedItem.name,
+                                    image: selectedItem.firstimg
                                 }
                             })
-                            dispatch({type:'OPEN_CART'})
+                            dispatch({ type: 'OPEN_CART' })
                         }} className={`w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</button>
                     </div>
                     <div className='text-[#575757] text-sm text-center'>
