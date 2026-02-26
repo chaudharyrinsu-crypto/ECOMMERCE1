@@ -1,23 +1,23 @@
 'use client'
-import React from 'react'
-import Nav from './Nav'
+import React, { useContext } from 'react'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";
-// && i.badge === 'newarrivalshoe'
-
-<div className='pb-12 pt-25 space-y-3 text-cente tracking-wide text-center'>
-    <h3 className='text-2xl'>Men's Shoes</h3>
-    <p className='text-sm text-[#575757]'>Lightweight, supportive, and wildly comfortable, our premium men’s shoes make any outing feel effortless.</p>
-</div>
+import Nav from '../mens-new-arrivals-components/Nav';
+import { CartContext } from '@/app/context/CartContext';
 
 const Cards = () => {
+    const{state,dispatch}=useContext(CartContext)
     return (
-        <section className='py-2.5'>
+        <section className='py-2.5 bg-[#ECE9E2]'>
+            <div className='pb-12 pt-25 space-y-3 text-cente tracking-wide text-center'>
+                <h3 className='text-2xl'>Men's Shoes</h3>
+                <p className='text-sm text-[#575757]'>Lightweight, supportive, and wildly comfortable, our premium men’s shoes make any outing feel effortless.</p>
+            </div>
             <Nav />
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 max-w-6xl mx-auto px-4 py-3.5 tracking-wider'>
                 {products
-                    .filter(i => i.gender === 'men' || i.gender === 'unisex')
+                    .filter(i => i.gender === 'men' && i.badge === 'newarrivalshoe')
                     .map((item, index) => (
                         <div key={index} className='bg-white rounded-2xl relative hover:z-50 hover:scale-[1.055] hover:shadow-xl duration-200 group'>
                             <Link href={`/products/${item.id}`} className='block'>
@@ -43,7 +43,7 @@ const Cards = () => {
                                                 <Link href='/' className='underline'>+{item.items.length - 5}</Link>
                                             )}
                                         </div>
-                                        <div className=' lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
+                                        <div onClick={()=>dispatch({type:''})} className='lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
                                             <span className='text-sm block'><BsMinecart /></span>
                                             <button className='uppercase font-semibold block'>add to cart</button>
                                         </div>
