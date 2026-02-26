@@ -1,11 +1,11 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { newArrivalShoe } from '../data/Alldata'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import { products } from '../data/Alldata'
 
 const NewArrivalHome = () => {
     const [mounted, setMounted] = useState(false)
@@ -45,11 +45,11 @@ const NewArrivalHome = () => {
                     navigation
                     className="w-full lg:h-full h-1/2 "
                 >
-                    {newArrivalShoe.map((img, index) => (
+                    {products.slice(1,7).map((img, index) => (
                         <SwiperSlide key={index}>
                             <div className="w-full h-full ">
                                 <img
-                                    src={img}
+                                    src={img.items[0].firstimg}
                                     alt="new arrivals shoes"
                                     className="w-full h-full md:object-cover object-contain"
                                 />

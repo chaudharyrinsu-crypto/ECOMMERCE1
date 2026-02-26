@@ -1,4 +1,5 @@
 'use client'
+import CarditemsHome from "./components/CarditemsHome";
 import HeroSection from "./components/HeroSection";
 import NewArrivalHome from "./components/NewArrivalHome";
 import NewArrivalitems from "./components/NewArrivalitems";
@@ -16,6 +17,7 @@ export default function Home() {
     <NewArrivalHome/>
     <TreeRunnerNZ/>
     <NewArrivalitems/>
+    <CarditemsHome/>
     </section>
     </>
   );
