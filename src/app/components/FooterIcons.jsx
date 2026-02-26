@@ -10,37 +10,25 @@ import { IoIosArrowDown } from "react-icons/io";
 import Image from 'next/image';
 
 const FooterIcons = () => {
+    const icons=[<FiInstagram />,<FaPinterest />,<FaFacebookF />,<BsTwitterX />,<FaTiktok />,<BsYoutube />]
   return (
     <>
-       <div className='space-y-5 py-5'>
-            <p className='text-[12px] uppercase'>Follow The Flock</p>
-            <ul className='flex gap-5 text-2xl'>
-                <li className='h-10 w-10 border rounded-full p-2'>
-                    <Link href={'/'}><FiInstagram /></Link>
+       <div className='space-y-5 py-10 md:py-5'>
+            <p className='text-[12px] uppercase md:text-start text-center'>Follow The Flock</p>
+            <ul className='flex gap-5 text-2xl md:justify-start justify-center'>
+                {icons.map((icon,index)=>(
+                    <li key={index} className='h-10 w-10 border rounded-full  flex items-center justify-center'>
+                    <Link href={'/'}>{icon}</Link>
                 </li>
-                <li className='h-10 w-10 border rounded-full p-2'>
-                    <Link href={'/'}><FaPinterest /></Link>
-                </li>
-                <li className='h-10 w-10 border rounded-full p-2'>
-                    <Link href={'/'}><FaFacebookF /></Link>
-                </li>
-                <li className='h-10 w-10 border rounded-full p-2'>
-                    <Link href={'/'}><BsTwitterX /></Link>
-                </li>
-                <li className='h-10 w-10 border rounded-full p-2'>
-                    <Link href={'/'}><FaTiktok /></Link>
-                </li>
-                <li className='h-10 w-10 border rounded-full p-2'>
-                    <Link href={'/'}><BsYoutube /></Link>
-                </li>
+                ))}
             </ul>
           </div>
-          <div className='py-12 flex items-center gap-5'>
-            <Image src='https://www.allbirds.com/cdn/shop/files/b-corp.svg?v=1751415254&width=80' alt='logo' height={50} width={50}/>
+          <div className='pt-12 pb-5 flex items-center md:justify-start justify-center gap-5'>
+            <Image className='md:block hidden' src='https://www.allbirds.com/cdn/shop/files/b-corp.svg?v=1751415254&width=80' alt='logo' height={50} width={50}/>
             <span className='flex gap-3 items-center text-[18px] px-5'>US <span className='text-[12px]'><IoIosArrowDown /></span></span>
           </div>
           <div className='border-t border-white/30 w-full py-5'>
-            <ul className='flex justify-between'>
+            <ul className='grid md:grid-cols-6 grid-cols-2  md:justify-center justify-start'>
                 <li>© 2025 Allbirds, Inc. All Rights Reserved</li>
                 <li>Refund policy</li>
                 <li>Privacy policy</li>

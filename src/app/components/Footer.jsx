@@ -12,17 +12,17 @@ const Footer = () => {
   return (
     <>
       <footer className='bg-[#212121] text-white px-10 pt-20 tracking-wider font-normal text-[12px]'>
-        <section className='flex justify-between '>
-          <div className='max-w-[600px] flex flex-col gap-8'>
-            <p className='font-medium uppercase'>Subscribe to our emails</p>
+        <section className='flex lg:flex-row flex-col justify-between gap-15'>
+          <div className='flex flex-col gap-8'>
+            <p className='font-medium uppercase w-full md:text-start text-center'>Subscribe to our emails</p>
             <div className='relative w-full '>
-              <input className='bg-white text-black py-2 px-3 text-[18px] rounded-full w-full' type="email" name="email" id="email" placeholder='Email Address' />
+              <input className='bg-white text-black py-2 px-3 text-[16px] rounded-full w-full md:w-90' type="email" name="email" id="email" placeholder='Email Address' />
               <button className='absolute right-3 text-[#212121] top-1/2 -translate-y-1/2'>SIGN UP</button>
             </div>
           </div>
-          <div className='flex justify-between gap-20'>
-            <div className='flex justify-between gap-8'>
-              <div className={`flex flex-col gap-8 border-b border-white/30 md:border-b-none`}>
+          <div className='flex flex-col md:flex-row justify-between gap-20'>
+            <div className='flex flex-col md:flex-row justify-between gap-5 md:gap-20 lg:gap-10'>
+              <div className={`flex flex-col gap-8 md:border-none border-b border-white/30 pb-5`}>
                 <div className='flex justify-between'>
                   <p className='uppercase'>Help</p>
                   <div onClick={() => SetHideList1(!hideList1)} className='text-[18px] md:hidden block'>{hideList1 ? <LuPlus /> : <LuMinus />}</div>
@@ -36,7 +36,7 @@ const Footer = () => {
                   <li><Link href={'/'}>Returns/Exchanges</Link></li>
                 </ul>
               </div>
-              <div className='flex flex-col gap-8 border-b border-white/30 md:border-b-none'>
+              <div className='flex flex-col gap-8 border-b border-white/30 md:border-none pb-5'>
                 <div className='flex justify-between'>
                   <p className='uppercase'>Shop</p>
                   <div onClick={() => SetHideList2(!hideList2)} className='text-[18px] md:hidden block'>{hideList2 ? <LuPlus /> : <LuMinus />}</div>
@@ -51,7 +51,7 @@ const Footer = () => {
                   <li><Link href={'/'}>Refer a Friend</Link> </li>
                 </ul>
               </div>
-              <div className='flex flex-col gap-8 border-b border-white/30 md:border-b-none'>
+              <div className='flex flex-col gap-8 border-b border-white/30 md:border-none pb-5'>
                 <div className='flex justify-between'>
                   <p className='uppercase'>Company</p>
                   <div onClick={() => SetHideList3(!hideList3)} className='text-[18px] md:hidden block'>{hideList3 ? <LuPlus /> : <LuMinus />}</div>
@@ -65,10 +65,21 @@ const Footer = () => {
                   <li><Link href={'/'}>Shoe Care</Link> </li>
                   <li><Link href={'/'}>Affiliates</Link> </li>
                   <li><Link href={'/'}>Bulk Orders</Link> </li>
+                  <ul className='md:hidden block space-y-5'>
+                    <li><Link href={'/'}>Careers</Link> </li>
+                    <li><Link href={'/'}>Press</Link> </li>
+                    <li><Link href={'/'}>Allbirds Responsible <span className='block'>Disclosure Program</span></Link> </li>
+                    <li><Link href={'/'}>California Transparency Act</Link> </li>
+                    <li><Link href={'/'}>Community Offers</Link> </li>
+                    <li><Link href={'/'}>Our Blog</Link> </li>
+                    <li><Link href={'/'}>Patents</Link> </li>
+                    <li><Link href={'/'}>Terms of Use - Wholesale</Link> </li>
+                    <li><Link href={'/'}>Allbirds Global Entities</Link> </li>
+                  </ul>
                 </ul>
               </div>
             </div>
-            <div className='py-5'>
+            <div className='py-5 md:block hidden'>
               <ul className='space-y-5 pt-10'>
                 <li><Link href={'/'}>Careers</Link> </li>
                 <li><Link href={'/'}>Press</Link> </li>

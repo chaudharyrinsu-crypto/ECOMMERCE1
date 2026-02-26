@@ -549,7 +549,7 @@ export const products = [
         title: "Men's Cruiser Terralux™",
         category: 'men-cruiser-terralux',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -590,7 +590,7 @@ export const products = [
         title: "Men's Varsity Cruiser",
         category: 'men-varsity-cruiser',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -631,7 +631,7 @@ export const products = [
         title: "Men's Dasher NZ",
         category: 'men-dasher-nz',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$140',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -762,7 +762,7 @@ export const products = [
         title: "Men's Tree Glider",
         category: 'men-tree-glider',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$140',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -884,7 +884,7 @@ export const products = [
         title: "Men's Dasher NZ Relay",
         category: 'men-dasher-nz-relay',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -955,7 +955,7 @@ export const products = [
         title: "Men's Runner NZ Terralux™",
         category: 'men-runner-nz-terralux',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -997,7 +997,7 @@ export const products = [
         title: "Men's Varsity Terralux™",
         category: 'men-varsity-terralux',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$145',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1038,7 +1038,7 @@ export const products = [
         title: "Men's Cruiser Canvas",
         category: 'men-cruiser-canvas',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1099,7 +1099,7 @@ export const products = [
         title: "Men's Cruiser Slip On",
         category: 'men-cruiser-slip-on',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1171,7 +1171,7 @@ export const products = [
         title: "Men's Varsity",
         category: 'men-varsity',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$120',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1233,7 +1233,7 @@ export const products = [
         title: "Men's Cruiser Slip On Canvas",
         category: 'men-cruiser-slip-on-canvas',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$90',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1284,7 +1284,7 @@ export const products = [
         title: "Men's Runner NZ Slip On",
         category: 'men-runner-nz-slip-on',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$105',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1345,7 +1345,7 @@ export const products = [
         title: "Men's Allbirds Slide",
         category: 'men-allbirds-slide',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$55',
         sizes: [8, 9, 10, 11, 12, 13, 14],
         items: [
@@ -1396,7 +1396,7 @@ export const products = [
         title: "Men's Allbirds Flip Flop",
         category: 'men-allbirds-flip-flop',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1447,7 +1447,7 @@ export const products = [
         title: "Men's Tree Runner NZ",
         category: 'men-tree-runner-nz',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$100',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1618,7 +1618,7 @@ export const products = [
         title: "Men's Trail Runners",
         category: 'men-trail-runners',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$145',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1669,7 +1669,7 @@ export const products = [
         title: "Men's Strider",
         category: 'men-strider',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$130',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1710,7 +1710,7 @@ export const products = [
         title: "Men's Golf Dasher",
         category: 'men-golf-dasher',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$150',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1761,7 +1761,7 @@ export const products = [
         title: "Men's Cruiser",
         category: 'men-cruiser',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$105',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1822,7 +1822,7 @@ export const products = [
         title: "Men's Kiwi Clog",
         category: 'men-kiwi-clog',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$110',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1853,7 +1853,7 @@ export const products = [
         title: "Men's Wool Cruiser",
         category: 'men-wool-cruiser',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$105',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1964,7 +1964,7 @@ export const products = [
         title: "Men's Wool Cruiser Waterproof",
         category: 'men-wool-cruiser-waterproof',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$140',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -1995,7 +1995,7 @@ export const products = [
         title: "Men's Wool Runner NZ",
         category: 'men-wool-runner-nz',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$110',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2016,7 +2016,7 @@ export const products = [
         title: "Men's Wool Runner NZ",
         category: 'men-wool-runner-nz-waterproof',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$150',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2037,7 +2037,7 @@ export const products = [
         title: "Men's Wool Runner NZ Mid Waterproof",
         category: 'men-wool-runner-nz-mid-waterproof',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$160',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2058,7 +2058,7 @@ export const products = [
         title: "Men's Wool Cruiser Slip On",
         category: 'men-wool-cruiser-slip-on',
         gender: 'men',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$100',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2262,7 +2262,7 @@ export const products = [
         title: "Women's Tree Glider",
         category: 'womens-tree-glider',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$140',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2303,7 +2303,7 @@ export const products = [
         title: "Women's Dasher NZ",
         category: 'womens-dasher-nz',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$140',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2434,7 +2434,7 @@ export const products = [
         title: "Women's Cruiser Terralux™",
         category: 'womens-cruiser-terralux',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2475,7 +2475,7 @@ export const products = [
         title: "Women's Varsity",
         category: 'womens-varsity',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$120',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2546,7 +2546,7 @@ export const products = [
         title: "Women's Breezer Point",
         category: 'womens-breezer-point',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$125',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2587,7 +2587,7 @@ export const products = [
         title: "Women's Dasher NZ Relay",
         category: 'womens-dasher-nz-relay',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2658,7 +2658,7 @@ export const products = [
         title: "Women's Cruiser Canvas",
         category: 'womens-cruiser-canvas',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$95',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2689,7 +2689,7 @@ export const products = [
         title: "Women's Cruiser Slip On",
         category: 'womens-cruiser-slip-on',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$100',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [{
@@ -2759,7 +2759,7 @@ export const products = [
         title: "Women's Runner NZ Slip On",
         category: 'womens-runner-nz-slip-on',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$105',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2830,7 +2830,7 @@ export const products = [
         title: "Women's Allbirds Slide",
         category: 'womens-allbirds-slide',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$55',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2881,7 +2881,7 @@ export const products = [
         title: "Women's Allbirds Flip Flop",
         category: 'womens-allbirds-flip-flop',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$50',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2932,7 +2932,7 @@ export const products = [
         title: "Women's Varsity Cruiser",
         category: 'womens-varsity-cruiser',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$115',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2973,7 +2973,7 @@ export const products = [
         title: "Women's Varsity Strap",
         category: 'womens-varsity-strap',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$115',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -2994,7 +2994,7 @@ export const products = [
         title: "Women's Breezer Mary Jane",
         category: 'womens-breezer-mary-jane',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$115',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3015,7 +3015,7 @@ export const products = [
         title: "Women's Tree Breezer",
         category: 'womens-tree-breezer',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$135',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3268,7 +3268,7 @@ export const products = [
         title: "Women's Lounger Lift",
         category: 'womens-lounger-lift',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$110',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3432,7 +3432,7 @@ export const products = [
         title: "Women's Kiwi Slipper",
         category: 'womens-kiwi-slipper',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$95',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3453,7 +3453,7 @@ export const products = [
         title: "Women's Kiwi Clog",
         category: 'womens-kiwi-clog',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$110',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3484,7 +3484,7 @@ export const products = [
         title: "Women's Wool Cruiser",
         category: 'womens-wool-cruiser',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$105',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3595,7 +3595,7 @@ export const products = [
         title: "Women's Wool Cruiser Waterproof",
         category: 'womens-wool-cruiser-waterproof',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$140',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3626,7 +3626,7 @@ export const products = [
         title: "Women's Wool Runner NZ",
         category: 'womens-wool-runner-nz',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$110',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [
@@ -3647,7 +3647,7 @@ export const products = [
         title: "Women's Wool Cruiser Slip On",
         category: 'womens-wool-cruiser-slip-on',
         gender: 'women',
-        badge: 'newarrival',
+        badge: 'newarrivalshoe',
         price: '$100',
         sizes: [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14],
         items: [

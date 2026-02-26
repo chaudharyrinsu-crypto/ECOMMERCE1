@@ -24,20 +24,13 @@ const NewArrivalitems = () => {
             <section className='px-3 text-sm w-full relative md:py-10 '>
                 <div className='flex justify-between px-3'>
                     <div className='underline underline-offset-8 decoration-2 text-[16px] font-medium  '>NEW ARRIVALS</div>
-                    {/* relative after:content-[""] after:absolute after:h-[2px] after:w-full after:bg-[#212121] after:bottom-0 after:left-0 */}
                     {/* Custom navigation buttons */}
-                    <div className="flex gap-2 items-center text-[18px]">
+                    <div className="md:flex hidden gap-2 items-center text-[18px]">
                         <button ref={prevRef} disabled={isBeginning} className={`h-9 w-9 rounded-full cursor-pointer flex items-center justify-center shadow ${isBeginning ? 'border border-gray-400 text-gray-400' : 'border border-[#212121] text-[#212121]'}`}>
                             <LiaAngleLeftSolid />
                         </button>
                         <button disabled={isEnd} ref={nextRef} className={`h-9 w-9 rounded-full cursor-pointer flex items-center justify-center shadow ${isEnd ? 'border border-gray-400 text-gray-400' : 'border border-[#212121] text-[#212121]'}`}><LiaAngleRightSolid /></button>
                     </div>
-                    {/* <div className="absolute top-0 right-3 z-10 md:flex hidden gap-2 text-[18px]">
-                        <button ref={prevRef} disabled={isBeginning} className={`h-9 w-9 rounded-full cursor-pointer flex items-center justify-center shadow ${isBeginning ? 'border border-gray-400 text-gray-400' : 'border border-[#212121] text-[#212121]'}`}>
-                            <LiaAngleLeftSolid />
-                        </button>
-                        <button disabled={isEnd} ref={nextRef} className={`h-9 w-9 rounded-full cursor-pointer flex items-center justify-center shadow ${isEnd ? 'border border-gray-400 text-gray-400' : 'border border-[#212121] text-[#212121]'}`}><LiaAngleRightSolid /></button>
-                    </div> */}
                 </div>
                 <div className='pt-4'>
                     <Swiper

@@ -14,8 +14,8 @@ const Nav = () => {
                 </ul>
                 <ul className='flex gap-2 items-center'>
                     <li className='flex gap-2 items-center border border-[#212121] text-white p-1  rounded-full'>
-                        <Link className='uppercase active:bg-[#212121] bg-[#212121] py-1.5 px-4 rounded-full' href='/'>men</Link>
-                        <Link className='uppercase active:bg-[#212121] active:text-white bg-transparent text-[#212121] py-1.5 px-4 rounded-full' href='/'>women</Link>
+                        <Link className='uppercase active:bg-[#212121] bg-[#212121] py-1.5 px-4 rounded-full' href='/collection/mens-new-arrivals'>men</Link>
+                        <Link className='uppercase active:bg-[#212121] active:text-white bg-transparent text-[#212121] py-1.5 px-4 rounded-full' href='/collection/womens-new-arrivals'>women</Link>
                     </li>
                     <li className='flex gap-2 items-center border border-[#212121] text-[#212121]  p-1  rounded-full'>
                         <Link className='py-1.5 px-4 rounded-full' href='/'>Best selling</Link>
