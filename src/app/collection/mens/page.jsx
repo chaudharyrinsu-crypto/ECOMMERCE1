@@ -7,7 +7,7 @@ import Nav from '../mens-new-arrivals-components/Nav';
 import { CartContext } from '@/app/context/CartContext';
 
 const Cards = () => {
-    const{state,dispatch}=useContext(CartContext)
+    const { state, dispatch } = useContext(CartContext)
     return (
         <section className='py-2.5 bg-[#ECE9E2]'>
             <div className='pb-12 pt-25 space-y-3 text-cente tracking-wide text-center'>
@@ -43,7 +43,24 @@ const Cards = () => {
                                                 <Link href='/' className='underline'>+{item.items.length - 5}</Link>
                                             )}
                                         </div>
-                                        <div onClick={()=>dispatch({type:''})} className='lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
+                                        <div onClick={(e) => {
+                                            e.preventDefault(); // stop link navigation
+                                            e.stopPropagation();
+
+                                            dispatch({
+                                                type: "ADD_TO_CART",
+                                                payload: {
+                                                    id: item.id,
+                                                    title: item.title,
+                                                    price: item.price,
+                                                    image: item.items[0].firstimg,
+                                                    size: item.sizes[0], // default size if needed
+                                                    quantity: 1,
+                                                }
+                                            });
+
+                                            dispatch({ type: "OPEN_CART" });
+                                        }} className='lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
                                             <span className='text-sm block'><BsMinecart /></span>
                                             <button className='uppercase font-semibold block'>add to cart</button>
                                         </div>
