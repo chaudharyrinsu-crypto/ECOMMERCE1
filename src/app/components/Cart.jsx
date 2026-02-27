@@ -9,7 +9,6 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 
 const Cart = () => {
-    const [hide, setHide] = useState(null)
     const { state, dispatch } = useContext(CartContext)
     return (
         <>
@@ -23,7 +22,7 @@ const Cart = () => {
                         </ul>
                         <div className=''>
                             {state.cart.map((item, index) => (
-                                <div key={index} className='flex justify-between items-center py-3 '>
+                                <div key={index} className='flex justify-between items-center py-3'>
                                     <div className='flex gap-5 '>
                                         <img className='h-20' src={item.image} alt="" />
                                         <div className='text-sm space-y-1'>

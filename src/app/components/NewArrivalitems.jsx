@@ -77,7 +77,7 @@ const NewArrivalitems = () => {
                                 key={i}
                                 className="flex items-center justify-center bg-white rounded-2xl py-5 "
                             >
-                                <Link href='/' className=' '>
+                                <Link href={`/products/${item.id}`} className=' '>
                                     <img className='object-cover h-full w-full' src={item.items[0].firstimg} alt="images" />
                                     <div className='px-5 space-y-2'>
                                         <p className='uppercase text-[14px]'>{item.title}</p>

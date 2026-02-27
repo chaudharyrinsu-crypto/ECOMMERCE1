@@ -13,7 +13,7 @@ const Hero = () => {
                 </div>
             </section>
             <section>
-                <div className='block space-y-4 md:flex justify justify-around max-w-5xl mx-auto md:gap-20 lg:gap-25 py-12 md:px-10 md:py-20 leading-5 text-start'>
+                <div className='space-y-4 flex md:flex-row flex-col justify-around max-w-5xl mx-auto md:gap-20 lg:gap-25 py-12 px-10 md:py-20 leading-5 text-center md:text-start'>
                     <p className='text-[12px] w-full md:max-w-[30%] tracking-wider'>DRIVEN BY A BELIEF IN BETTER, WE TURNED TO NATURE FOR ANSWERS.</p>
                     <p className='text-sm md:text-xl lg:text-2xl w-full md:max-w-[70%] '>Made with animal-free, bio-fabricated leather alternative INNOVERA™, the all new Terralux™ Collection delivers iconic Allbirds comfort in our most refined silhouette yet. It’s part of our commitment to doing better things in a better way, while still making the most comfortable shoes on the planet.</p>
                 </div>

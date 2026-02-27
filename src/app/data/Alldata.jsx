@@ -979,7 +979,7 @@ export const products = [
         items: [
             {
                 edition: 'limited',
-                name: '',
+                name: 'Light Grey',
                 hex: '#B4B6BA',
                 firstimg: 'https://www.allbirds.com/cdn/shop/files/A12535_26Q1_Runner-NZ-Terralux-Light-Grey-Parchment_PDP_LEFT.png?v=1768955085&width=1280',
                 secondimg: 'https://www.allbirds.com/cdn/shop/files/A12535_26Q1_Runner-NZ-Terralux-Light-Grey-Parchment_PDP_BACK.png?v=1768955085&width=1280',

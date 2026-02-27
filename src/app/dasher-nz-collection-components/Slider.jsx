@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { dasherNzCollectionImage} from '../data/Alldata'
+import { dasherNzCollectionImage } from '../data/Alldata'
 import { Swiper, SwiperSlide } from 'swiper/react'
 // import { Navigation } from 'swiper/modules'
 // import 'swiper/css/navigation'
