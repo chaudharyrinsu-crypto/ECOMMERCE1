@@ -2,7 +2,7 @@
 import React from 'react'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
-import Nav from '../../mens-new-arrivals-components/Nav'
+import Nav from '../../col-components/Nav'
 import Image from 'next/image'
 
 const Cards = () => {

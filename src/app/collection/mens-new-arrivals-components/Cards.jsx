@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Nav from './Nav'
+import Nav from '../col-components/Nav'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";

@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";
-import Nav from '../mens-new-arrivals-components/Nav';
+import Nav from '../col-components/Nav';
 import { CartContext } from '@/app/context/CartContext';
 
 const Cards = () => {
