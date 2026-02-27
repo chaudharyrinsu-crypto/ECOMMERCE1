@@ -1,15 +1,13 @@
 'use client'
-import React, { useContext } from 'react'
+import React from 'react'
+import Nav from '../col-components/Nav'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";
-import Nav from '../col-components/Nav';
-import { CartContext } from '@/app/context/CartContext';
 
-const Cards = () => {
-    const { state, dispatch } = useContext(CartContext)
+const page = () => {
     return (
-        <section className='py-2.5 bg-[#ECE9E2]'>
+        <section className='p-3 bg-[#ECE9E2]'>
             <div className='pb-12 pt-25 space-y-3 text-cente tracking-wide text-center'>
                 <h3 className='text-2xl'>Men's Shoes</h3>
                 <p className='text-sm text-[#575757]'>Lightweight, supportive, and wildly comfortable, our premium men’s shoes make any outing feel effortless.</p>
@@ -43,24 +41,7 @@ const Cards = () => {
                                                 <Link href='/' className='underline'>+{item.items.length - 5}</Link>
                                             )}
                                         </div>
-                                        <div onClick={(e) => {
-                                            e.preventDefault(); // stop link navigation
-                                            e.stopPropagation();
-
-                                            dispatch({
-                                                type: "ADD_TO_CART",
-                                                payload: {
-                                                    id: item.id,
-                                                    title: item.title,
-                                                    price: item.price,
-                                                    image: item.items[0].firstimg,
-                                                    size: item.sizes[0], // default size if needed
-                                                    quantity: 1,
-                                                }
-                                            });
-
-                                            dispatch({ type: "OPEN_CART" });
-                                        }} className='lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
+                                        <div className=' lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
                                             <span className='text-sm block'><BsMinecart /></span>
                                             <button className='uppercase font-semibold block'>add to cart</button>
                                         </div>
@@ -83,4 +64,4 @@ const Cards = () => {
     )
 }
 
-export default Cards
+export default page

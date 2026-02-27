@@ -1,17 +1,13 @@
 'use client'
-import React from 'react'
+import React, { useContext } from 'react'
 import Nav from '../col-components/Nav'
 import { products } from '@/app/data/Alldata'
 import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";
-// && i.badge === 'newarrivalshoe'
-
-<div className='pb-12 pt-25 space-y-3 text-cente tracking-wide text-center'>
-    <h3 className='text-2xl'>Men's Shoes</h3>
-    <p className='text-sm text-[#575757]'>Lightweight, supportive, and wildly comfortable, our premium men’s shoes make any outing feel effortless.</p>
-</div>
+import { CartContext } from '@/app/context/CartContext'
 
 const Cards = () => {
+    const{state,dispatch}=useContext(CartContext)
     return (
         <section className='py-2.5'>
             <Nav />
@@ -45,7 +41,18 @@ const Cards = () => {
                                         </div>
                                         <div className=' lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
                                             <span className='text-sm block'><BsMinecart /></span>
-                                            <button className='uppercase font-semibold block'>add to cart</button>
+                                            <button onClick={(e)=>{
+                                                e.preventDefault()
+                                                e.stopPropagation()
+                                                dispatch({type:'ADD_TO_CART',payload:{
+                                                    id:item.id,
+                                                    title:item.title,
+                                                    price:item.price,
+                                                    size:item.sizes[0],
+                                                    image:item.items[0].firstimg
+                                                }})
+                                                dispatch({type:'OPEN_CART'})
+                                            }} className='uppercase font-semibold block'>add to cart</button>
                                         </div>
                                         <span className='xl:block hidden text-sm font-semibold'>{item.price}</span>
                                     </div>
