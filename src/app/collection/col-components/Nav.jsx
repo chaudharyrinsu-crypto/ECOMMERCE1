@@ -15,7 +15,7 @@ const Nav = () => {
                         <li className='lg:hidden block uppercase font-semibold sm:text-sm text-[12px]'>Filter and Sort</li>
                     </div>
 
-                    <li className='block lg:hidden gap-2 items-center text-[#212121]  p-1  '>
+                    <li className='block lg:hidden items-center text-[#212121]  p-1  '>
                         <Link className='h-6 w-6 flex items-center justify-center rounded-full border border-[#212121]' href='/'><RiArrowDownSLine /></Link>
                     </li>
                 </ul>

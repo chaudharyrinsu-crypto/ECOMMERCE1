@@ -1,5 +1,5 @@
 'use client'
-const newArrivalDescription=[
+export const newArrivalDescription=[
     {
         heading:'What is a sustainable shoe?',
         description:'A sustainable shoe is one made from natural, renewable materials with a low carbon footprint, using ethical and eco-friendly agricultural and manufacturing processes. At Allbirds, reducing our environmental impact has been our priority since day one. Renewable materials: We believe we can do better than synthetic materials. Allbirds replaces petroleum-based materials with natural, renewable ones and invents alternatives when a replacement doesn’t yet exist. Regenerative agriculture: For us, the future of fashion is inextricably linked to the future of regenerative agriculture. Not only does it represent a huge opportunity to reverse climate change, it also provides benefits to local communities, biodiversity, ecology, the long-term viability of the land, and more. Low carbon footprint: We’re holding ourselves accountable to lowering our carbon footprint and putting it on display next to each product.'
