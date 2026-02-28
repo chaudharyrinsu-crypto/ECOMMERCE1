@@ -2,6 +2,7 @@
 import CarditemsHome from "./components/CarditemsHome";
 import CollectionBox from "./components/CollectionBox";
 import HeroSection from "./components/HeroSection";
+import MensWomensNewarrivalCard from "./components/MensWomensNewarrivalCard";
 import NewArrivalHome from "./components/NewArrivalHome";
 import NewArrivalitems from "./components/NewArrivalitems";
 import TopCategory from "./components/TopCategory";
@@ -18,6 +19,7 @@ export default function Home() {
     <TopCategory/>
     <NewArrivalHome/>
     <TreeRunnerNZHeadin/>
+    <MensWomensNewarrivalCard/>
     <CarditemsHome/>
     <NewArrivalitems/>
     {/* <TreeRunnerNZ/> */}
