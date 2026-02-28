@@ -38,14 +38,20 @@ const NewArrivalHome = () => {
                     // slidesPerView={2}
                     // direction={direction}
                     breakpoints={{
-                        320: { slidesPerView: 1.5 },
-                        768: { slidesPerView: 2.5 },
+                        320: {
+                            slidesPerView: 1.5,
+                            navigation: false
+                        },
+                        768: {
+                            slidesPerView: 2.5,
+                            navigation: true
+                        }
                         //   1024: { slidesPerView: 3 },
                     }}
-                    navigation
+                    // navigation
                     className="w-full lg:h-full h-1/2 "
                 >
-                    {products.slice(1,7).map((img, index) => (
+                    {products.slice(1, 7).map((img, index) => (
                         <SwiperSlide key={index}>
                             <div className="w-full h-full ">
                                 <img

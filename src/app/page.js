@@ -1,10 +1,12 @@
 'use client'
 import CarditemsHome from "./components/CarditemsHome";
+import CollectionBox from "./components/CollectionBox";
 import HeroSection from "./components/HeroSection";
 import NewArrivalHome from "./components/NewArrivalHome";
 import NewArrivalitems from "./components/NewArrivalitems";
 import TopCategory from "./components/TopCategory";
 import TreeRunnerNZ from "./components/TreeRunnerNZ";
+import TreeRunnerNZHeadin from "./components/TreeRunnerNZHeadin";
 
 
 export default function Home() {
@@ -15,9 +17,11 @@ export default function Home() {
     <HeroSection/>
     <TopCategory/>
     <NewArrivalHome/>
-    <TreeRunnerNZ/>
-    <NewArrivalitems/>
+    <TreeRunnerNZHeadin/>
     <CarditemsHome/>
+    <NewArrivalitems/>
+    {/* <TreeRunnerNZ/> */}
+    <CollectionBox/>
     </section>
     </>
   );
