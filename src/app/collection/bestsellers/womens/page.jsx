@@ -37,19 +37,19 @@ const page = () => {
                                         className='w-full object-contain h-full'
                                     />
                                     <div className='lg:p-4 p-2'>
-                                        <Link href='/' className='font-semibold block md:text-sm text-[12px] uppercase'>{item.title}</Link>
-                                        <Link href='/' className='text-sm block mt-0 lg:mt-1.5'>{item.items[0].name}</Link>
+                                        <h3 className='font-semibold block md:text-sm text-[12px] uppercase'>{item.title}</h3>
+                                        <span className='text-sm block mt-0 lg:mt-1.5'>{item.items[0].name}</span>
                                         <div className='relative flex gap-2 xl:flex-row flex-col justify-between mt-1.5'>
                                             <span className='block xl:hidden text-sm font-semibold'>{item.price}</span>
                                             <div className='flex gap-1 xl:gap-2'>
                                                 {item.items.slice(0, 5).map((color, index) => (
-                                                    <Link href='/' key={index}
+                                                    <span key={index}
                                                         style={{ backgroundColor: color.hex }}
                                                         className='lg:h-6 h-5 w-5 lg:w-6  rounded-full inline-block border'
-                                                    ></Link>
+                                                    ></span>
                                                 ))}
                                                 {item.items.length > 5 && (
-                                                    <Link href='/' className='underline'>+{item.items.length - 5}</Link>
+                                                    <span className='underline'>+{item.items.length - 5}</span>
                                                 )}
                                             </div>
                                             <div className=' lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
@@ -73,7 +73,7 @@ const page = () => {
                                         </div>
                                         <div className='grid grid-cols-5 gap-2 duration-200 opacity-0 group-hover:opacity-100 bg-white absolute group-hover:z-50 group-hover:shadow-xl p-4 left-0 right-0 w-full rounded-b-2xl'>
                                             {item.sizes.map((size, index) => (
-                                                <Link href='/' key={index} className='border border-[#E0DACF] flex items-center justify-center text-sm p-2 tracking-tighter cursor-pointer'>{size}</Link>
+                                                <span key={index} className='border border-[#E0DACF] flex items-center justify-center text-sm p-2 tracking-tighter cursor-pointer'>{size}</span>
                                             ))}
 
                                         </div>

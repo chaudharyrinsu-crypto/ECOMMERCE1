@@ -23,7 +23,7 @@ const Cards = () => {
                                     alt={item.title}
                                     className='w-full object-contain h-full'
                                 />
-                                <div className='lg:p-4 p-2 block'>
+                                <div className='lg:p-4 p-2'>
                                     <h3 className='font-semibold block md:text-sm text-[12px] uppercase'>{item.title}</h3>
                                     <span className='text-sm block mt-0 lg:mt-1.5'>{item.items[0].name}</span>
                                     <div className='relative flex gap-2 xl:flex-row flex-col justify-between mt-1.5'>
