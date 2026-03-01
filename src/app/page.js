@@ -2,12 +2,13 @@
 import CarditemsHome from "./components/CarditemsHome";
 import CollectionBox from "./components/CollectionBox";
 import HeroSection from "./components/HeroSection";
-import MensWomensNewarrivalCard from "./components/MensWomensNewarrivalCard";
+import MensNewarrivalCard from "./components/MensNewarrivalCard";
 import NewArrivalHome from "./components/NewArrivalHome";
 import NewArrivalitems from "./components/NewArrivalitems";
 import TopCategory from "./components/TopCategory";
 import TreeRunnerNZ from "./components/TreeRunnerNZ";
 import TreeRunnerNZHeadin from "./components/TreeRunnerNZHeadin";
+import WomensNewarrivalCard from "./components/WomensNewarrivalCard";
 
 
 export default function Home() {
@@ -19,7 +20,8 @@ export default function Home() {
     <TopCategory/>
     <NewArrivalHome/>
     <TreeRunnerNZHeadin/>
-    <MensWomensNewarrivalCard/>
+    <MensNewarrivalCard/>
+    <WomensNewarrivalCard/>
     <CarditemsHome/>
     <NewArrivalitems/>
     {/* <TreeRunnerNZ/> */}
