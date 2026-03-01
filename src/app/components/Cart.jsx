@@ -13,16 +13,16 @@ const Cart = () => {
     return (
         <>
             <section className='relative z-50 tracking-wide'>
-                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white shadow ${state.cartOpen ? " translate-x-0" : "translate-x-full"} transform transition-transform  duration-900 ease-in-out`}>
+                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white shadow border-l border-[#CDCDCD] ${state.cartOpen ? " translate-x-0" : "translate-x-full"} transform transition-transform  duration-900 ease-in-out`}>
                     <div className=' px-3'>
                         <ul className='py-5 after:content-[""] relative after:absolute after:bg-[#212121] after:h-1.75 after:w-full after:bottom-0 after:rounded-full after:left-1/2 after:-translate-x-1/2 flex justify-between'>
                             <li className='text-[12px]'>CART</li>
                             <li className='text-sm text-[#575757]'>You've earned free shipping!</li>
                             <li onClick={() => dispatch({ type: 'CLOSE_CART' })} className='cursor-pointer'><RxCross1 /></li>
                         </ul>
-                        <div className=''>
+                        <div className='h-[100px] overflow-y-scroll'>
                             {state.cart.map((item, index) => (
-                                <div key={index} className='flex justify-between items-center py-3'>
+                                <div key={index} className='flex justify-between items-center py-3 border-b-1 border-[#CDCDCD]'>
                                     <div className='flex gap-5 '>
                                         <img className='h-20' src={item.image} alt="" />
                                         <div className='text-sm space-y-1'>
@@ -76,7 +76,7 @@ const Cart = () => {
 
                             }
                         </div>
-                        <div className='py-2 border-b-1 border-t-1 border-t-[#CDCDCD] border-b-[#CDCDCD]'>
+                        <div className='py-2 border-b-1 border-t-1 border-t-[#CDCDCD] border-[#CDCDCD]'>
                             <div className='bg-[#ECE9E2] py-2 px-3 rounded-xl'>
                                 <div className='flex items-center justify-between gap-4'>
                                     <div className=''>

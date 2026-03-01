@@ -28,7 +28,7 @@ const MensNewarrivalCardResponsive = () => {
                     // navigation
                     className="w-full pb-10"
                 >
-                    {products.slice(1, 7).map((item, index) => (
+                    {products.slice(1, 5).map((item, index) => (
                         <SwiperSlide key={index}>
                             <div className="w-full h-full relative bg-white rounded-2xl">
                                 <img

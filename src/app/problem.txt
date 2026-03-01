@@ -1,7 +1,8 @@
 3.padding in Newarrival is not equall (top,bottom)
+in WomensNewarrivalCard (home the button hover is not working properly)
 4. in collection/bestsellers/mens gap in text of hero in not the same while making responsive
 - in cards while responsive the add to cart py is not same in all
 4. in Terralux collection- in Card component the problem with absolute white box's width
 5. props in details and featues in mens-new-arrivals and center the dots to the parent
-
+6.in cart the height of images (scrollbehavior)
 
