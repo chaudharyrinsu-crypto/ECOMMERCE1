@@ -5,15 +5,21 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+
 
 const Cart = () => {
     const { state, dispatch } = useContext(CartContext)
     return (
         <>
-            <section className='relative z-50 tracking-wide'>
-                <div className={`fixed top-0 overflow-y-auto w-[40%] right-0 bg-white shadow border-l border-[#CDCDCD] ${state.cartOpen ? " translate-x-0" : "translate-x-full"} transform transition-transform  duration-900 ease-in-out`}>
+            <section className={`fixed inset-0 z-[100] tracking-wide transition-all duration-[1s] ${state.cartOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+                {/* Overlay */}
+                <div
+                    onClick={() => dispatch({ type: 'CLOSE_CART' })}
+                    className={`absolute inset-0 bg-black transition-opacity duration-[1s] ${state.cartOpen ? 'opacity-40 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                />
+                <div className={`fixed top-0 right-0 h-full w-[40%] bg-white shadow overflow-y-auto transform transition-transform duration-[1s] ease-in-out ${state.cartOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'}`}>
                     <div className=' px-3'>
                         <ul className='py-5 after:content-[""] relative after:absolute after:bg-[#212121] after:h-1.75 after:w-full after:bottom-0 after:rounded-full after:left-1/2 after:-translate-x-1/2 flex justify-between'>
                             <li className='text-[12px]'>CART</li>
@@ -22,7 +28,7 @@ const Cart = () => {
                         </ul>
                         <div className='h-[100px] overflow-y-scroll'>
                             {state.cart.map((item, index) => (
-                                <div key={index} className='flex justify-between items-center py-3 border-b-1 border-[#CDCDCD]'>
+                                <div key={index} className='flex justify-between items-center py-3 border-b border-b-[#CDCDCD]'>
                                     <div className='flex gap-5 '>
                                         <img className='h-20' src={item.image} alt="" />
                                         <div className='text-sm space-y-1'>
@@ -44,11 +50,13 @@ const Cart = () => {
                                     <div className='text-sm flex flex-col gap-6 text-end'>
                                         <span className='font-semibold'>$140</span>
                                         <ul className='flex justify-between gap-2.5 items-center border border-[#CDCDCD] px-3.5 py-1 rounded-2xl font-semibold'>
-                                            <li onClick={()=>dispatch({type:'REMOVE_FROM_CART',payload:{
-                                                id:item.id,
-                                                size:item.size,
-                                                color:item.color
-                                            }})} className='cursor-pointer'><RiDeleteBinLine /></li>
+                                            <li onClick={() => dispatch({
+                                                type: 'REMOVE_FROM_CART', payload: {
+                                                    id: item.id,
+                                                    size: item.size,
+                                                    color: item.color
+                                                }
+                                            })} className='cursor-pointer'><RiDeleteBinLine /></li>
                                             <li onClick={() =>
                                                 dispatch({
                                                     type: "DECREMENT_QUANTITY",
@@ -76,7 +84,7 @@ const Cart = () => {
 
                             }
                         </div>
-                        <div className='py-2 border-b-1 border-t-1 border-t-[#CDCDCD] border-[#CDCDCD]'>
+                        <div className='py-2 border-b-1 border-t-1 border-t-[#CDCDCD] border-b-[#CDCDCD]'>
                             <div className='bg-[#ECE9E2] py-2 px-3 rounded-xl'>
                                 <div className='flex items-center justify-between gap-4'>
                                     <div className=''>
@@ -132,7 +140,7 @@ const Cart = () => {
                             <span>Shipping</span>
                             <span className='font-medium uppercase'>$5.00 Free</span>
                         </div>
-                        <Link className='bg-[#212121] duration-500 hover:border-[#212121] hover:bg-[#6b6a6a] text-white text-center py-4 rounded-full text-[12px]' href={`/`}>CHECKOUT</Link>
+                        <Link className='bg-[#212121] duration-[1s] hover:border-[#212121] hover:bg-[#6b6a6a] text-white text-center py-4 rounded-full text-[12px]' href={`/`}>CHECKOUT</Link>
                     </div>
                 </div>
             </section>
