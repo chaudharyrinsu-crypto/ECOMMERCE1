@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";
 import { CartContext } from '../context/CartContext';
 import MensNewarrivalCardResponsive from './MensNewarrivalCardResponsive';
+import { RxCross1 } from "react-icons/rx";
 
 const MensNewarrivalCard = () => {
   const { state, dispatch } = useContext(CartContext)
-  const [overlay,setOverlay]=useState(null)
+  const [activeOverlay, setActiveOverlay] = useState(null)
   return (
     <>
       <section className='pt-5 pb-2.5 lg:pb-5 lg:pt-10 px-3 tracking-wider'>
@@ -23,7 +24,9 @@ const MensNewarrivalCard = () => {
 
           <div className='lg:grid grid-cols-2 gap-2.5  hidden'>
             {products.filter(i => i.gender === 'men').slice(1, 5).map((item, index) => (
-              <div key={index} className={`bg-white rounded-2xl min-h-[320px] relative ${overlay?'after:content-[""] after:absolute after:h-full after:w-full after:bg-black after:opacity-40 after:z-50':'after:bg-transparent'}`}>
+              <div key={index} className={`bg-white rounded-2xl min-h-[320px] relative overflow-hidden`}>
+                {/* box overlay */}
+                <div className={`absolute h-full w-full  rounded-2xl z-40  duration-500 ${activeOverlay === index ? 'bottom-0 translate-y-0 block bg-black opacity-40' : ' hidden pointer-events-none'}`}></div>
                 <div className=''>
                   <img className='object-cover absolute top-[-50px]' src={item.items[0].fifthimg} alt="firstimg" />
                 </div>
@@ -46,49 +49,34 @@ const MensNewarrivalCard = () => {
                         <span className='underline text-sm'>+{item.items.length - 5}</span>
                       )}
                     </div>
-                    <button onClick={(e) => {
-                      e.preventDefault()
-                      e.stopPropagation()
-                      dispatch({
-                        type: 'ADD_TO_CART', payload: {
-                          id: item.id,
-                          title: item.title,
-                          price: item.price,
-                          size: item.sizes[0],
-                          image: item.items[0].firstimg
-                        }
-                      })
-                      dispatch({ type: 'OPEN_CART' })
-                    }} className='cursor-pointer uppercase flex gap-2.5 border py-2.5 px-4 rounded-4xl text-sm block hover:bg-[#212121] hover:text-white duration-200'><BsMinecart /> <span className='text-[12px] block font-medium'>ADD</span></button>
+                    <button onClick={() => setActiveOverlay(index)} className='cursor-pointer uppercase flex gap-2.5 border py-2.5 px-4 rounded-4xl text-sm hover:bg-[#212121] hover:text-white duration-500'><BsMinecart /> <span className='text-[12px] block font-medium'>ADD</span></button>
                   </div>
                 </div>
-                {/* <div className='grid grid-cols-7 gap-2'>
-                  {item.sizes.map((size, index) => (
-                  <div className='border'>
-                    <button key={index} className=''>{size}</button>
+                <div className={`absolute w-full p-3 z-50 bg-[#F8F8F7] rounded-2xl transition-all duration-500
+  ${activeOverlay === index ? 'bottom-0 translate-y-0 opacity-100 ' : '-bottom-full opacity-0 pointer-events-none'}`}>
+                  <div className='flex justify-between text-sm pb-2'>
+                    <p>Select a size</p>
+                    <span onClick={() => setActiveOverlay(null)} className={`cursor-pointer`}><RxCross1 /></span>
                   </div>
-                ))}</div> */}
-                <div className='absolute w-full bottom-0 p-3 bg-[#F8F8F7] rounded-2xl'>
-                  <p>Select a size</p>
                   <div className='grid grid-cols-6 gap-2 '>
                     {item.sizes.map((size, index) => (
                       <button key={index}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          e.stopPropagation()
+                        onClick={() => {
                           dispatch({
                             type: "ADD_TO_CART",
                             payload: {
-                              id: size.id,
-                              title: size.title,
-                              price: size.price,
-                              size: size.sizes[0],
-                              image: item.items[0].firstimg
+                              id: item.id,
+                              title: item.title,
+                              price: item.price,
+                              size: size,
+                              image: item.items[0].fifthimg
                             }
                           })
-                          dispatch({ type: 'OPEN_CART' })
+
+                          dispatch({ type: "OPEN_CART" })
+                          setActiveOverlay(null)
                         }}
-                        className='flex items-center justify-center text-[12px] p-2 tracking-tighter cursor-pointer hover:bg-[#121212] border-[#E0DACF] border'
+                        className='flex items-center justify-center text-[12px] p-2 tracking-tighter cursor-pointer hover:bg-[#121212] hover:text-white border-[#E0DACF] border'
                       >
                         {size}
                       </button>

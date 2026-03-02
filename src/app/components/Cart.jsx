@@ -19,16 +19,16 @@ const Cart = () => {
                     onClick={() => dispatch({ type: 'CLOSE_CART' })}
                     className={`absolute inset-0 bg-black transition-opacity duration-[1s] ${state.cartOpen ? 'opacity-40 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 />
-                <div className={`fixed top-0 right-0 h-full w-[40%] bg-white shadow overflow-y-auto transform transition-transform duration-[1s] ease-in-out ${state.cartOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'}`}>
+                <div className={`fixed top-0 right-0 h-full min-w-[20%] lg:max-w-[40%] bg-white shadow overflow-y-auto transform transition-transform duration-[1s] ease-in-out ${state.cartOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'}`}>
                     <div className=' px-3'>
-                        <ul className='py-5 after:content-[""] relative after:absolute after:bg-[#212121] after:h-1.75 after:w-full after:bottom-0 after:rounded-full after:left-1/2 after:-translate-x-1/2 flex justify-between'>
-                            <li className='text-[12px]'>CART</li>
-                            <li className='text-sm text-[#575757]'>You've earned free shipping!</li>
+                        <ul className='lg:py-5 py-4 after:content-[""] relative after:absolute after:bg-[#212121] after:h-1.75 after:w-full after:bottom-0 after:rounded-full after:left-1/2 after:-translate-x-1/2 flex justify-between'>
+                            <li className='text-[12px] font-semibold'>CART ({state.cart.length})</li>
+                            <li className='lg:text-sm text-[12px] text-[#575757]'>You've earned free shipping!</li>
                             <li onClick={() => dispatch({ type: 'CLOSE_CART' })} className='cursor-pointer'><RxCross1 /></li>
                         </ul>
                         <div className='h-[100px] overflow-y-scroll'>
                             {state.cart.map((item, index) => (
-                                <div key={index} className='flex justify-between items-center py-3 border-b border-b-[#CDCDCD]'>
+                                <div key={index} className='flex justify-between items-center py-4 border-b border-b-[#CDCDCD]'>
                                     <div className='flex gap-5 '>
                                         <img className='h-20' src={item.image} alt="" />
                                         <div className='text-sm space-y-1'>
