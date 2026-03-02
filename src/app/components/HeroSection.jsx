@@ -14,7 +14,7 @@ const HeroSection = () => {
                         <div className='flex flex-col gap-3 md:gap-4 text-end tracking-wider'>
                             <p className='uppercase text-white text-sm font-normal'>all new dasher n2 collection</p>
                             <h1 className='capitalize text-white text-2xl '>Widely comfortable. super natural</h1>
-                            <div className='mt-3 space-x-2.5 md:space-x-4  text-[14px] uppercase font-medium'>
+                            <div className='mt-3 space-x-2.5 md:space-x-4 text-[14px] uppercase font-medium'>
                                 <Link className='bg-white hover:bg-[#212121] hover:text-white transition py-2 px-6 rounded-4xl' href='/collection/mens-new-arrivals'>
                                     shop men</Link>
                                 <Link className='bg-white hover:bg-[#212121] hover:text-white transition py-2 px-6 rounded-4xl' href='/collection/womens-new-arrivals'>shop women</Link>
