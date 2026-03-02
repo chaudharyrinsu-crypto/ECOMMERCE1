@@ -9,29 +9,40 @@ import Allbirds from './Allbirds';
 import { CartContext } from '../context/CartContext';
 import WomenCategoryCollection from '../hoverItems/WomenCategoryCollection';
 import { RiArrowDropRightLine } from "react-icons/ri";
+import { RxCross1 } from "react-icons/rx";
 
 const Header = () => {
     const { state, dispatch } = useContext(CartContext)
     const [hoverItem, setHoverItem] = useState(null)
+    const [category, setCategory] = useState(null)
     return (
         <>
 
-            <section onMouseLeave={() => setHoverItem(null)} className='relative'>
-                {/* for mobile pad */}
-                <div className='uppercase text-[14px] font-medium lg:hidden transition-all duration-500 fixed bottom-0 top-0 left-0 bg-[#ECE9E2] w-full z-[100] flex items-center'>
-                    <div className='flex justify-between'>
-                        <Link onMouseEnter={() => setHoverItem('men')} className='transition-all duration-500' href='/'>men</Link>
-                        <span><RiArrowDropRightLine /></span>
+            <section onMouseLeave={() => setHoverItem(null)} className='relative '>
+                {/* mobile res  */}
+                {category && (
+                    <div className="fixed inset-0 bg-[#ECE9E2] z-40 
+                  flex flex-col justify-start 
+                  px-6 pt-[110px] gap-8 
+                  uppercase text-[14px] font-medium lg:hidden">
+
+                        <div className="flex justify-between">
+                            <span>men</span>
+                            <RiArrowDropRightLine className="text-xl border rounded-full" />
+                        </div>
+
+                        <div className="flex justify-between">
+                            <span>women</span>
+                            <RiArrowDropRightLine className="text-xl border rounded-full" />
+                        </div>
+
+                        <div className="flex justify-between">
+                            <span>sale</span>
+                            <RiArrowDropRightLine className="text-xl border rounded-full" />
+                        </div>
+
                     </div>
-                    <div className='flex justify-between'>
-                        <Link onMouseEnter={() => setHoverItem('women')} href='/'>women</Link>
-                        <span><RiArrowDropRightLine /></span>
-                    </div>
-                    <div className='flex justify-between'>
-                        <Link href='/'>sale</Link>
-                        <span><RiArrowDropRightLine /></span>
-                    </div>
-                </div>
+                )}
                 <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>
                     <MenCategoryCollection hoverItem={hoverItem === 'men'} />
                 </div>
@@ -47,9 +58,9 @@ const Header = () => {
 
                 <nav className='px-5'>
                     <div className='relative max-w-328 mx-auto'>
-                        <div className='w-full mx-auto absolute top-5 right-0 z-50 bg-white rounded-xl sm:overflow-hidden overflow-x-auto'>
+                        <div className='w-full mx-auto absolute top-5 right-0 z-50 bg-white rounded-xl sm:overflow-hidden overflow-x-auto shadow'>
                             <div className='w-full flex justify-between items-center px-3 py-2 lg:px-5 lg:py-3'>
-                                <div className='cursor-pointer text-xl font-bold block lg:hidden'><HiBars3BottomLeft /></div>
+                                <div onClick={() => setCategory(!category)} className='cursor-pointer text-xl font-bold block lg:hidden'>{category ? <RxCross1 /> : <HiBars3BottomLeft />}</div>
                                 <Allbirds />
                                 <div className='uppercase text-[14px] font-medium space-x-6 lg:block hidden transition-all duration-500'>
                                     <Link onMouseEnter={() => setHoverItem('men')} className='transition-all duration-500' href='/'>men</Link>
@@ -67,7 +78,7 @@ const Header = () => {
                                     )}</button>
                                 </div>
                             </div>
-                            <div className='bg-[#ECE9E2] text-[12px] space-x-5 lg:hidden block px-3 py-2 lg:px-5 lg:py-3 md:text-center'>
+                            <div className={`bg-[#ECE9E2] text-[12px] space-x-5 lg:hidden block px-3 py-2 lg:px-5 lg:py-3 md:text-center ${category ? 'hidden' : 'block'}`}>
                                 <Link href={`/collection/mens`}>MEN'S</Link>
                                 <Link href={`/collection/womens`}>WOMEN'S</Link>
                                 <Link href={`/collection/mens-new-arrivals`}>NEWARRIVALS</Link>
@@ -82,4 +93,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header 
