@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { customerFavorites, menShoes, topAddOns } from '../data/Alldata'
+import { allCollection, customerFavorites, menShoes, topAddOns } from '../data/Alldata'
 import Link from 'next/link'
 
 const WomenCategoryCollection = ({ hoverItem }) => {
@@ -18,15 +18,9 @@ const WomenCategoryCollection = ({ hoverItem }) => {
                     </div>
                     <div className='grid grid-cols-4 text-[14px]'>
                         <div className='py-2 uppercase'>
-                            {/* {allCollection.map(a=>(
-                    <Link className='uppercase flex mt-6 font-medium hover:underline' key={a} href='/'>{a}</Link>
-                ))} */}
-                            <Link className=' flex mt-6 font-medium hover:underline' href='/pages/dasher-nz-collection'>Dasher NZ Collection</Link>
-                            <Link className='flex mt-6 font-medium hover:underline' href='/pages/terralux-collection'>Terralux™ Collection</Link>
-                            <Link className=' flex mt-6 font-medium hover:underline' href='/pages/varsity-collection'>Varsity Collection</Link>
-                            <Link className=' flex mt-6 font-medium hover:underline' href='/collection/womens-new-arrivals'>New Arrivals</Link>
-                            <Link className=' flex mt-6 font-medium hover:underline' href='/collection/bestsellers/womens'>Bestsellers</Link>
-
+                            {allCollection.map((collection,index) => (
+                                <Link className='uppercase flex mt-6 font-medium hover:underline' key={index} href={collection.link}>{collection.title}</Link>
+                            ))}
                         </div>
                         <div className='py-2'>
                             <Link href='/collection/womens' className='mt-6 inline-block font-medium uppercase hover:underline'>Women's Shoes</Link>

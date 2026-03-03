@@ -10,11 +10,13 @@ import { CartContext } from '../context/CartContext';
 import WomenCategoryCollection from '../hoverItems/WomenCategoryCollection';
 import { RiArrowDropRightLine } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
+import { collectionCategory } from '../data/Alldata';
 
 const Header = () => {
     const { state, dispatch } = useContext(CartContext)
     const [hoverItem, setHoverItem] = useState(null)
     const [category, setCategory] = useState(null)
+    const [clickNext, setClickNext] = useState(null)
     return (
         <>
 
@@ -25,22 +27,12 @@ const Header = () => {
                   flex flex-col justify-start 
                   px-6 pt-[110px] gap-8 
                   uppercase text-[14px] font-medium lg:hidden">
-
-                        <div className="flex justify-between">
-                            <span>men</span>
-                            <RiArrowDropRightLine className="text-xl border rounded-full" />
-                        </div>
-
-                        <div className="flex justify-between">
-                            <span>women</span>
-                            <RiArrowDropRightLine className="text-xl border rounded-full" />
-                        </div>
-
-                        <div className="flex justify-between">
-                            <span>sale</span>
-                            <RiArrowDropRightLine className="text-xl border rounded-full" />
-                        </div>
-
+                        {collectionCategory.map((title, index) => (
+                            <div key={index} className="flex justify-between">
+                                <span>{title}</span>
+                                <RiArrowDropRightLine onClick={()=>setClickNext(index)} className="text-xl border rounded-full" />
+                            </div>
+                        ))}
                     </div>
                 )}
                 <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>

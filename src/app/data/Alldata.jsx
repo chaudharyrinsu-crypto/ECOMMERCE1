@@ -17,9 +17,29 @@ export const newArrivalDescription=[
         description:'The carbon footprint of a shoe comes down to five factors: materials, manufacturing, transportation, product use, and end-of-life. (Learn more about how these are measured and minimized.) Because Allbirds is so committed to our mission to lower our carbon footprint, we measure all of these factors and report back to our customers on our progress. You’ll also find the carbon footprint of every Allbirds product on that product’s page so that you can compare and choose the low-carbon shoes that you love.'
     }
 ]
+export const collectionCategory=['men','women','sale']
 // mens 
-export const allCollection = ['Dasher NZ Collection', 'Terralux™ Collection', 'Varsity Collection', 'New Arrivals', 'Bestsellers',
-    '$100 and Under']
+export const allCollection = [
+    {
+        title:'Dasher NZ Collection',
+        link:'/pages/dasher-nz-collection'
+    },
+    {
+        title:'Terralux™ Collection',
+        link:'/pages/terralux-collection'
+    },
+    {
+        title:'Varsity Collection',
+        link:'/pages/varsity-collection'
+    },
+    {
+        title:'New Arrivals',
+        link:'/collection/mens-new-arrivals'
+    },
+    {
+        title:'Bestsellers',
+        link:'/collection/bestsellers/mens'
+    }]
 
 export const menShoes = ['Shop All', 'Sneakers', 'All-Weather', 'Slip Ons', 'High Tops', 'Sandals']
 
