@@ -1,9 +1,10 @@
 'use client'
 import React from 'react'
-import { allCollection, customerFavorites, menShoes, topAddOns } from '../data/Alldata'
+import { allCollection, customerFavorites, items, menCollectionImg, menShoes, topAddOns } from '../data/Alldata'
 import Link from 'next/link'
+import { RiArrowDropRightLine } from "react-icons/ri";
 
-const MenCategoryCollection = ({ hoverItem }) => {
+const MenCategoryCollection = ({ hoverItem,clickNext }) => {
     return (
         <>
             <section
@@ -11,10 +12,16 @@ const MenCategoryCollection = ({ hoverItem }) => {
             >
                 <div className={`max-w-330 m-auto transition-all duration-700 delay-500 ${hoverItem ? "opacity-100" : "opacity-0"}`}
                 >
-                    <div className='bg-[#E0DACF] py-3 rounded-xl  space-x-6 text-[14px] font-medium text-center'>
-                        <Link href='/'>Shoes</Link>
-                        <Link href='/'>Socks & Apparel</Link>
-                        <Link href='/'>Sale</Link>
+                    <div className='bg-[#E0DACF] py-3 rounded-xl flex lg:flex-row flex-col justify-center gap-6 text-[14px] font-medium text-center '>
+                        {items.map((item,index)=>(
+                            <div key={index} className="flex justify-between cursor-pointer">
+                            <span className=''>{item}</span>
+                            <RiArrowDropRightLine className={`text-xl border rounded-full lg:hidden block`} />
+                            </div>
+                        ))}
+                        {/* <Link className='' href='/'>Shoes</Link>
+                        <Link className='' href='/'>Socks & Apparel</Link>
+                        <Link href='/'>Sale</Link> */}
                     </div>
                     <div className='grid grid-cols-4 text-[14px]'>
                         <div className='py-2 uppercase'>

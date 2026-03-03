@@ -30,13 +30,13 @@ const Header = () => {
                         {collectionCategory.map((title, index) => (
                             <div key={index} className="flex justify-between">
                                 <span>{title}</span>
-                                <RiArrowDropRightLine onClick={()=>setClickNext(index)} className="text-xl border rounded-full" />
+                                <RiArrowDropRightLine onClick={() => setClickNext(index)} className="text-xl border rounded-full" />
                             </div>
                         ))}
                     </div>
                 )}
                 <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>
-                    <MenCategoryCollection hoverItem={hoverItem === 'men'} />
+                    <MenCategoryCollection hoverItem={hoverItem === 'men'} clickNext={clickNext} />
                 </div>
                 <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>
                     <WomenCategoryCollection hoverItem={hoverItem === 'women'} />

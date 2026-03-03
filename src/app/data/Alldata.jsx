@@ -1,44 +1,79 @@
 'use client'
-export const newArrivalDescription=[
+export const newArrivalDescription = [
     {
-        heading:'What is a sustainable shoe?',
-        description:'A sustainable shoe is one made from natural, renewable materials with a low carbon footprint, using ethical and eco-friendly agricultural and manufacturing processes. At Allbirds, reducing our environmental impact has been our priority since day one. Renewable materials: We believe we can do better than synthetic materials. Allbirds replaces petroleum-based materials with natural, renewable ones and invents alternatives when a replacement doesn’t yet exist. Regenerative agriculture: For us, the future of fashion is inextricably linked to the future of regenerative agriculture. Not only does it represent a huge opportunity to reverse climate change, it also provides benefits to local communities, biodiversity, ecology, the long-term viability of the land, and more. Low carbon footprint: We’re holding ourselves accountable to lowering our carbon footprint and putting it on display next to each product.'
+        heading: 'What is a sustainable shoe?',
+        description: 'A sustainable shoe is one made from natural, renewable materials with a low carbon footprint, using ethical and eco-friendly agricultural and manufacturing processes. At Allbirds, reducing our environmental impact has been our priority since day one. Renewable materials: We believe we can do better than synthetic materials. Allbirds replaces petroleum-based materials with natural, renewable ones and invents alternatives when a replacement doesn’t yet exist. Regenerative agriculture: For us, the future of fashion is inextricably linked to the future of regenerative agriculture. Not only does it represent a huge opportunity to reverse climate change, it also provides benefits to local communities, biodiversity, ecology, the long-term viability of the land, and more. Low carbon footprint: We’re holding ourselves accountable to lowering our carbon footprint and putting it on display next to each product.'
     },
     {
-        heading:'What is the advantage of a sustainable shoe?',
-        description:'There are three main advantages to sustainable shoes like Allbirds: they’re lightweight, breathable, and make less of an impact on the planet than synthetic shoes. Lightweight: All of our shoes are made to be lightweight. But our SuperLight collection is especially light-as-air, clocking in at 4 to 5 ounces each. These everyday sneakers are made with our innovative SuperLight Foam, with carbon-negative, sugarcane-derived green EVA, for a midsole that is approximately 70% bio-based content. (Compare that with usual industry foams that are often 100% plastics made from petroleum.) Breathability: Natural materials like breezy eucalyptus fiber let your feet breathe and keep you comfortable. Environmental Impact: Our current reliance on fossil fuels is accelerating climate change, creating negative impacts on waste, biodiversity, and more. Transitioning back to renewable, natural materials and working toward the lowest carbon footprint in the industry is how sustainable shoes can make a difference.'
+        heading: 'What is the advantage of a sustainable shoe?',
+        description: 'There are three main advantages to sustainable shoes like Allbirds: they’re lightweight, breathable, and make less of an impact on the planet than synthetic shoes. Lightweight: All of our shoes are made to be lightweight. But our SuperLight collection is especially light-as-air, clocking in at 4 to 5 ounces each. These everyday sneakers are made with our innovative SuperLight Foam, with carbon-negative, sugarcane-derived green EVA, for a midsole that is approximately 70% bio-based content. (Compare that with usual industry foams that are often 100% plastics made from petroleum.) Breathability: Natural materials like breezy eucalyptus fiber let your feet breathe and keep you comfortable. Environmental Impact: Our current reliance on fossil fuels is accelerating climate change, creating negative impacts on waste, biodiversity, and more. Transitioning back to renewable, natural materials and working toward the lowest carbon footprint in the industry is how sustainable shoes can make a difference.'
     },
     {
-        heading:'What are eco-friendly sneaker materials?',
-        description:'Eco-friendly sneaker materials are materials that are renewable and natural, with low carbon footprints. Allbirds uses eco-friendly renewable materials like eucalyptus tree fiber, sugarcane, post-consumer recycled polyester (to make our laces), and soft merino wool. Right now, 57% of footwear and 64% of apparel is made from synthetic materials, which are made from plastics. Plastics come from oil, a fossil fuel that’s accelerating climate change. Making the switch to renewable materials and sustainable footwear is a step in the right direction to reverse climate change.'
+        heading: 'What are eco-friendly sneaker materials?',
+        description: 'Eco-friendly sneaker materials are materials that are renewable and natural, with low carbon footprints. Allbirds uses eco-friendly renewable materials like eucalyptus tree fiber, sugarcane, post-consumer recycled polyester (to make our laces), and soft merino wool. Right now, 57% of footwear and 64% of apparel is made from synthetic materials, which are made from plastics. Plastics come from oil, a fossil fuel that’s accelerating climate change. Making the switch to renewable materials and sustainable footwear is a step in the right direction to reverse climate change.'
     },
     {
-        heading:'How can I reduce my carbon footprint on my shoes?',
-        description:'The carbon footprint of a shoe comes down to five factors: materials, manufacturing, transportation, product use, and end-of-life. (Learn more about how these are measured and minimized.) Because Allbirds is so committed to our mission to lower our carbon footprint, we measure all of these factors and report back to our customers on our progress. You’ll also find the carbon footprint of every Allbirds product on that product’s page so that you can compare and choose the low-carbon shoes that you love.'
+        heading: 'How can I reduce my carbon footprint on my shoes?',
+        description: 'The carbon footprint of a shoe comes down to five factors: materials, manufacturing, transportation, product use, and end-of-life. (Learn more about how these are measured and minimized.) Because Allbirds is so committed to our mission to lower our carbon footprint, we measure all of these factors and report back to our customers on our progress. You’ll also find the carbon footprint of every Allbirds product on that product’s page so that you can compare and choose the low-carbon shoes that you love.'
     }
 ]
-export const collectionCategory=['men','women','sale']
+export const items=['Shoes','Socks & Apparel','Sale']
+export const collectionCategory = ['men', 'women', 'sale']
+export const menCollectionImg = [
+    {
+        title: 'Dasher NZ Collection',
+        img: 'https://www.allbirds.com/cdn/shop/files/26Q1_DasherNZ_Site_Navigation_HalfTile_Men_Desktop-Mobile_3x2_6e3e608c-ee7b-4873-9be1-a206271b0aa0.jpg?v=1769632125&width=400',
+        link: '/pages/dasher-nz-collection'
+    },
+    {
+        title: 'Shop Terralux™',
+        img: 'https://www.allbirds.com/cdn/shop/files/26Q1_Terralux_Site_Navigation_HalfTile_Desktop-Mobile_3x2_Mens_02.jpg?v=1771369905&width=400',
+        link: '/pages/terralux-collection'
+    },
+    {
+        title: "Mens's New Arrivals",
+        img: 'https://www.allbirds.com/cdn/shop/files/26Q1_Varsity_Site_Navigation_HalfTile_Mens_NewArrivals_Desktop-Mobile_3x2_612bfdf5-b712-4da2-ae64-c6c0bab8d6bd.jpg?v=1766444873&width=400',
+        link: '/collection/mens-new-arrivals'
+    }
+]
+export const womenCollectionImg = [
+    {
+        title: 'Dasher NZ Collection',
+        img: 'https://www.allbirds.com/cdn/shop/files/26Q1_DasherNZ_Site_Navigation_HalfTile_Women_Desktop-Mobile_3x2_bb154588-ab04-43fe-a0eb-28186bf6172f.jpg?v=1769632124&width=400',
+        link: '/pages/dasher-nz-collection'
+    },
+    {
+        title: 'Shop Terralux™',
+        img: 'https://www.allbirds.com/cdn/shop/files/26Q1_Terralux_Site_Navigation_HalfTile_Desktop-Mobile_3x2_Womens.jpg?v=1771369905&width=400',
+        link: '/pages/terralux-collection'
+    },
+    {
+        title: "Womens's New Arrivals",
+        img: 'https://www.allbirds.com/cdn/shop/files/26Q1_Varsity_Site_Navigation_HalfTile_Womens_NewArrivals_Desktop-Mobile_3x2_9784dedb-e6f3-4a6b-ae32-b40db6db194d.jpg?v=1766444873&width=400',
+        link: '/collection/womens-new-arrivals'
+    }
+]
 // mens 
 export const allCollection = [
     {
-        title:'Dasher NZ Collection',
-        link:'/pages/dasher-nz-collection'
+        title: 'Dasher NZ Collection',
+        link: '/pages/dasher-nz-collection'
     },
     {
-        title:'Terralux™ Collection',
-        link:'/pages/terralux-collection'
+        title: 'Terralux™ Collection',
+        link: '/pages/terralux-collection'
     },
     {
-        title:'Varsity Collection',
-        link:'/pages/varsity-collection'
+        title: 'Varsity Collection',
+        link: '/pages/varsity-collection'
     },
     {
-        title:'New Arrivals',
-        link:'/collection/mens-new-arrivals'
+        title: 'New Arrivals',
+        link: '/collection/mens-new-arrivals'
     },
     {
-        title:'Bestsellers',
-        link:'/collection/bestsellers/mens'
+        title: 'Bestsellers',
+        link: '/collection/bestsellers/mens'
     }]
 
 export const menShoes = ['Shop All', 'Sneakers', 'All-Weather', 'Slip Ons', 'High Tops', 'Sandals']
