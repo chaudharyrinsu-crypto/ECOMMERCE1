@@ -15,7 +15,7 @@ import { collectionCategory } from '../data/Alldata';
 const Header = () => {
     const { state, dispatch } = useContext(CartContext)
     const [hoverItem, setHoverItem] = useState(null)
-    const [category, setCategory] = useState(null)
+    const [category, setCategory] = useState(false)
     const [clickNext, setClickNext] = useState(null)
     return (
         <>
@@ -23,21 +23,22 @@ const Header = () => {
             <section onMouseLeave={() => setHoverItem(null)} className='relative '>
                 {/* mobile res  */}
                 {category && (
-                    <div className="fixed inset-0 bg-[#ECE9E2] z-40 
-                  flex flex-col justify-start 
-                  px-6 pt-[110px] gap-8 
-                  uppercase text-[14px] font-medium lg:hidden">
+                    <div className="fixed inset-0 bg-[#ECE9E2] z-40 flex flex-col justify-start px-6 pt-[110px] gap-8  uppercase text-[14px] font-medium lg:hidden">
                         {collectionCategory.map((title, index) => (
                             <div key={index} className="flex justify-between">
                                 <span>{title}</span>
-                                <RiArrowDropRightLine onClick={() => setClickNext(index)} className="text-xl border rounded-full" />
+                                <RiArrowDropRightLine onClick={() => setClickNext(!clickNext)} className="text-xl border rounded-full" />
                             </div>
                         ))}
                     </div>
                 )}
                 <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>
-                    <MenCategoryCollection hoverItem={hoverItem === 'men'} clickNext={clickNext} />
+                    <MenCategoryCollection hoverItem={hoverItem === 'men'} />
                 </div>
+                <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>
+                    {clickNext && <MenCategoryCollection clickNext={clickNext} />}
+                </div>
+
                 <div className={`absolute left-0 w-full  ${hoverItem ? "top-[100%] visible" : "top-[90%] invisible pointer-events-none"} transition-all duration-500`}>
                     <WomenCategoryCollection hoverItem={hoverItem === 'women'} />
                 </div>

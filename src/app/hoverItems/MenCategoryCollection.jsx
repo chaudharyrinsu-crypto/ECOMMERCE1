@@ -4,19 +4,16 @@ import { allCollection, customerFavorites, items, menCollectionImg, menShoes, to
 import Link from 'next/link'
 import { RiArrowDropRightLine } from "react-icons/ri";
 
-const MenCategoryCollection = ({ hoverItem,clickNext }) => {
+const MenCategoryCollection = ({ hoverItem, clickNext }) => {
     return (
         <>
-            <section
-                className={`absolute top-0 left-0 z-50 w-full py-20 bg-[#ECE9E2] transition-all duration-500 ${hoverItem ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}
-            >
-                <div className={`max-w-330 m-auto transition-all duration-700 delay-500 ${hoverItem ? "opacity-100" : "opacity-0"}`}
-                >
-                    <div className='bg-[#E0DACF] py-3 rounded-xl flex lg:flex-row flex-col justify-center gap-6 text-[14px] font-medium text-center '>
-                        {items.map((item,index)=>(
+            <section className={`absolute top-0 left-0 z-50 w-full py-20 bg-[#ECE9E2] transition-all duration-500 ${hoverItem ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`} >
+                <div className={`max-w-330 m-auto transition-all duration-700 delay-500 ${hoverItem ? "opacity-100" : "opacity-0"}`}>
+                    <div className={`bg-[#E0DACF] py-3 rounded-xl flex lg:flex-row flex-col justify-center gap-6 text-[14px] font-medium text-center ${clickNext?'translate-x-0 ':'-translate-x-full'}`}>
+                        {items.map((item, index) => (
                             <div key={index} className="flex justify-between cursor-pointer">
-                            <span className=''>{item}</span>
-                            <RiArrowDropRightLine className={`text-xl border rounded-full lg:hidden block`} />
+                                <span className=''>{item}</span>
+                                <RiArrowDropRightLine className={`text-xl border rounded-full lg:hidden block`} />
                             </div>
                         ))}
                         {/* <Link className='' href='/'>Shoes</Link>
