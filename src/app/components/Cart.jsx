@@ -8,7 +8,6 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-
 const Cart = () => {
     const { state, dispatch } = useContext(CartContext)
     return (
