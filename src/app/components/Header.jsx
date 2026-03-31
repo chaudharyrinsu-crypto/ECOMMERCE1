@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <>
 
-            <section onMouseLeave={() => setHoverItem(null)} className='relative '>
+            <section onMouseLeave={() => setHoverItem(null)} className='relative text-[#212121]'>
                 {/* mobile res  */}
                 {category && (
                     <div className="fixed inset-0 bg-[#ECE9E2] z-40 flex flex-col justify-start px-6 pt-[110px] gap-8  uppercase text-[14px] font-medium lg:hidden">
