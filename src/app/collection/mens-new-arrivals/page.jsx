@@ -7,7 +7,7 @@ import NewArrivalAbout from '../col-components/NewArrivalAbout'
 const page = () => {
   return (
     <>
-      <section className='p-3 bg-[#ECE9E2]'>
+      <section className='p-3 bg-[#ECE9E2] text-[#212121]'>
         <Hero/>
         <Cards/>
         <NewArrivalAbout/>

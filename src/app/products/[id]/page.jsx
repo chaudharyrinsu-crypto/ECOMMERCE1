@@ -24,7 +24,7 @@ const page = () => {
 
     return (
         <>
-            <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative'>
+            <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative text-[#212121]'>
                 <div className=' md:relative md:block h-full'>
                     <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
                     <div className='flex absolute top-100'>

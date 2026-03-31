@@ -17,7 +17,7 @@ const FooterIcons = () => {
             <p className='text-[12px] uppercase md:text-start text-center'>Follow The Flock</p>
             <ul className='flex gap-5 text-2xl md:justify-start justify-center'>
                 {icons.map((icon,index)=>(
-                    <li key={index} className='h-10 w-10 border rounded-full  flex items-center justify-center'>
+                    <li key={index} className='p-2 border rounded-full  flex items-center justify-center'>
                     <Link href={'/'}>{icon}</Link>
                 </li>
                 ))}
@@ -28,7 +28,7 @@ const FooterIcons = () => {
             <span className='flex gap-3 items-center text-[18px] px-5'>US <span className='text-[12px]'><IoIosArrowDown /></span></span>
           </div>
           <div className='border-t border-white/30 w-full py-5'>
-            <ul className='grid md:grid-cols-6 grid-cols-2  md:justify-center justify-start'>
+            <ul className='grid md:grid-cols-6 grid-cols-2 gap-2 md:justify-center justify-between'>
                 <li>© 2025 Allbirds, Inc. All Rights Reserved</li>
                 <li>Refund policy</li>
                 <li>Privacy policy</li>

@@ -12,7 +12,7 @@ const Cart = () => {
     const { state, dispatch } = useContext(CartContext)
     return (
         <>
-            <section className={`fixed inset-0 z-[100] tracking-wide transition-all duration-[1s] ${state.cartOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+            <section className={`fixed inset-0 z-[100] tracking-wide transition-all duration-[1s] ${state.cartOpen ? 'pointer-events-auto' : 'pointer-events-none'} text-[#212121]`}>
                 {/* Overlay */}
                 <div
                     onClick={() => dispatch({ type: 'CLOSE_CART' })}
@@ -102,7 +102,7 @@ const Cart = () => {
                                 <div className={`h-5.5 w-5.5 flex items-center justify-center rounded-full border cursor-pointer`}><MdKeyboardArrowDown /></div>
                             </div>
                             <div className='p-2'>
-                                <div className='flex gap-5 text-sm bg-white p-2 rounded-xl'>
+                                <div className='flex gap-2 sm:gap-5 text-sm bg-white p-2 rounded-xl'>
                                     <img className='h-20' src="https://www.allbirds.com/cdn/shop/files/SKU-SOCKS-GLOBAL-ANKLE-BLIZZARD-1_Resize_0006_Layer-1-min.png?v=1761253065" alt="" />
                                     <div className='space-y-3'>
                                         <div className='flex justify-between'>

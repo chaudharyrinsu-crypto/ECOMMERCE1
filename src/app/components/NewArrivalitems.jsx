@@ -21,7 +21,7 @@ const NewArrivalitems = () => {
 
     return (
         <>
-            <section className='px-3 text-sm w-full relative '>
+            <section className='px-3 text-sm w-full relative text-[#212121]'>
                 <div className='flex justify-between px-3'>
                     <div className='underline underline-offset-8 decoration-2 text-[16px] font-medium  '>NEW ARRIVALS</div>
                     {/* Custom navigation buttons */}

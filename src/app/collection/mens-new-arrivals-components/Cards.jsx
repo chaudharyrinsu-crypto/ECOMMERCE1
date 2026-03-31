@@ -7,11 +7,11 @@ import { BsMinecart } from "react-icons/bs";
 import { CartContext } from '@/app/context/CartContext'
 
 const Cards = () => {
-    const{state,dispatch}=useContext(CartContext)
+    const { state, dispatch } = useContext(CartContext)
     return (
-        <section className='py-2.5'>
+        <section className='py-2.5 '>
             <Nav />
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 max-w-6xl mx-auto px-4 py-3.5 tracking-wider'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 max-w-6xl mx-auto px-4 py-3.5 tracking-wider pt-10'>
                 {products
                     .filter(i => i.gender === 'men' || i.gender === 'unisex')
                     .map((item, index) => (
@@ -41,17 +41,19 @@ const Cards = () => {
                                         </div>
                                         <div className=' lg:hidden flex justify-center gap-2 text-[12px] cursor-pointer border-t border-[#E0DACF] py-2 mt-1'>
                                             <span className='text-sm block'><BsMinecart /></span>
-                                            <button onClick={(e)=>{
+                                            <button onClick={(e) => {
                                                 e.preventDefault()
                                                 e.stopPropagation()
-                                                dispatch({type:'ADD_TO_CART',payload:{
-                                                    id:item.id,
-                                                    title:item.title,
-                                                    price:item.price,
-                                                    size:item.sizes[0],
-                                                    image:item.items[0].firstimg
-                                                }})
-                                                dispatch({type:'OPEN_CART'})
+                                                dispatch({
+                                                    type: 'ADD_TO_CART', payload: {
+                                                        id: item.id,
+                                                        title: item.title,
+                                                        price: item.price,
+                                                        size: item.sizes[0],
+                                                        image: item.items[0].firstimg
+                                                    }
+                                                })
+                                                dispatch({ type: 'OPEN_CART' })
                                             }} className='uppercase font-semibold block'>add to cart</button>
                                         </div>
                                         <span className='xl:block hidden text-sm font-semibold'>{item.price}</span>

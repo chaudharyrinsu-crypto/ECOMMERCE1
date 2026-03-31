@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { BsMinecart } from "react-icons/bs";
 import { CartContext } from '../context/CartContext';
 import MensNewarrivalCardResponsive from './MensNewarrivalCardResponsive';
+import WomensNewarrivalCardResponsive from './WomensNewarrivalCardResponsive';
 import { RxCross1 } from "react-icons/rx";
 
 const MensNewarrivalCard = () => {
@@ -11,7 +12,7 @@ const MensNewarrivalCard = () => {
     const [activeOverlay, setActiveOverlay] = useState(null)
     return (
         <>
-            <section className='pt-5 pb-2.5 lg:pb-5 lg:pt-10 px-3 tracking-wider'>
+            <section className='pt-5 pb-2.5 lg:pb-5 lg:pt-10 px-3 tracking-wider text-[#212121]'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-2.5 '>
                     <div className='lg:grid grid-cols-2 gap-2.5  hidden'>
                         {products.filter(i => i.gender === 'women').slice(1, 5).map((item, index) => (
@@ -80,8 +81,8 @@ const MensNewarrivalCard = () => {
                     <div className='relative'>
                         <img className='rounded-3xl' src="  https://www.allbirds.com/cdn/shop/files/26Q1_Terralux_Site_ProductGrid_Desktop-Mobile_9x16_W_v2_7ab82be7-ee5a-4792-b146-2dbcc47edf6f.jpg?v=1771541948&width=1280" alt="womenshoe" />
                         <div className='absolute top-10 lg:top-30 text-white text-center space-y-3 lg:space-y-4 left-1/2 -translate-x-1/2'>
-                            <h3 className='lg:text-4xl text-2xl font-normal'>Women’s New Arrivals</h3>
-                            <p className='text-[12px] lg:text-sm'>Start the season with style, comfort, and versatility.</p>
+                            <h3 className='lg:text-4xl text-3xl font-normal'>Women’s New Arrivals</h3>
+                            <p className='text-sm'>Start the season with style, comfort, and versatility.</p>
                         </div>
                         <Link href={`/collection/womens-new-arrivals`} className='cursor-pointer uppercase flex gap-2.5 py-2.5 px-4 rounded-4xl text-sm absolute z-40 right-3 bottom-3 bg-white hover:bg-[#212121] hover:text-white duration-200'><BsMinecart /> <span className='text-[12px] block font-medium'>SHOP NOW</span></Link>
                     </div>
@@ -89,7 +90,9 @@ const MensNewarrivalCard = () => {
 
             </section>
 
-            <MensNewarrivalCardResponsive />
+            {/* <MensNewarrivalCardResponsive /> */}
+            <WomensNewarrivalCardResponsive/>
+            
         </>
     )
 }

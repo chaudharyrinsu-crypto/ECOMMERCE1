@@ -10,7 +10,7 @@ import Image from 'next/image';
 const page = () => {
     const { state, dispatch } = useContext(CartContext)
     return (
-        <section className='bg-[#ECE9E2]'>
+        <section className='bg-[#ECE9E2] text-[#212121]'>
             <section className='p-3 bg-[#ECE9E2]'>
                 <div className='relative'>
                     <Image src='/bestsllers-mens-hero.webp' height={600} width={600} alt='mens-new-arrivals-hero'

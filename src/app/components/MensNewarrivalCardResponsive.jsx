@@ -14,7 +14,7 @@ const MensNewarrivalCardResponsive = () => {
     const [activeOverlay, setActiveOverlay] = useState(null)
     return (
         <>
-            <div className="w-full lg:hidden block px-3 tracking-wider ">
+            <div className="w-full lg:hidden block px-3 tracking-wider text-[#212121]">
 
                 <Swiper
                     breakpoints={{
@@ -57,7 +57,7 @@ const MensNewarrivalCardResponsive = () => {
                                                 <span className='underline md:text-sm text-[12px]'>+{item.items.length - 5}</span>
                                             )}
                                         </div>
-                                        <button onClick={() => setActiveOverlay(index)} className='cursor-pointer uppercase flex gap-2.5 border py-2.5 px-4 rounded-4xl text-sm hover:bg-[#212121] hover:text-white duration-200'><BsMinecart /> <span className='text-[12px] block font-medium'>ADD</span></button>
+                                        <button onClick={() => setActiveOverlay(index)} className='cursor-pointer uppercase flex gap-2.5 border py-1 px-2 rounded-4xl text-sm hover:bg-[#212121] hover:text-white duration-200'><BsMinecart /> <span className='text-[12px] block font-medium'>ADD</span></button>
                                     </div>
                                 </div>
                                 <div className={`absolute w-full p-3 z-50 bg-[#F8F8F7] rounded-2xl transition-all duration-500

@@ -5,7 +5,7 @@ import { AllFeatures } from '../data/Alldata'
 const Features = () => {
   return (
     <>
-      <section className='px-3 py-2.5 bg-[#ECE9E2]'>
+      <section className='px-3 py-2.5 bg-[#ECE9E2] text-[#212121]'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2.5'>
 
             {AllFeatures.map((item,index)=>(

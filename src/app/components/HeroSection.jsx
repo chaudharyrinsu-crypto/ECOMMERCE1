@@ -8,7 +8,7 @@ const HeroSection = () => {
     return (
         <>
             <section className="px-3 pt-3 md:font-medium font-normal text-[#212121]">
-                <div className="relative h-45 lg:h-130 w-full rounded-2xl overflow-hidden">
+                <div className="relative h-[300px] lg:h-130 w-full rounded-2xl overflow-hidden">
                     <Image src="/hero.jpg" fill alt="heroimage" className="object-cover rounded-2xl" />
                     <div className='absolute lg:right-16 z-10 lg:bottom-19 right-5 bottom-10'>
                         <div className='flex flex-col gap-3 md:gap-4 text-end tracking-wider'>

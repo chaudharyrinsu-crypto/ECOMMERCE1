@@ -9,7 +9,7 @@ import { CartContext } from '@/app/context/CartContext'
 const page = () => {
     const { state, dispatch } = useContext(CartContext)
     return (
-        <section className='p-3 bg-[#ECE9E2]'>
+        <section className='p-3 bg-[#ECE9E2] text-[#212121]'>
             <div className='pb-12 pt-25 space-y-3 text-cente tracking-wide text-center'>
                 <h3 className='text-2xl'>Women's Shoes</h3>
                 <p className='text-sm text-[#575757]'>Lightweight, supportive, and wildly comfortable, our premium men’s shoes make any outing feel effortless.</p>
