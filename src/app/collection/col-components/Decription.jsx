@@ -4,7 +4,7 @@ import React from 'react'
 const Decription = () => {
   return (
     <>
-     <ul className='grid grid-cols-1 md:grid-cols-3 gap-3 bg-white p-6 rounded-2xl'>
+     <ul className='grid grid-cols-1 md:grid-cols-3 gap-3 bg-white p-6 rounded-2xl text-[#212121]'>
                     <li>
                         <h3 className='pb-2'>THE DETAILS</h3>
                         <p className='text-sm text-[#575757] tracking-wide leading-6'>Crafted using bio-fabrication, designed for movement, and built for modern ambition, the Cruiser Terralux™ combines iconic Allbirds comfort with our most refined styling to date—because comfort doesn’t have to be casual.</p>

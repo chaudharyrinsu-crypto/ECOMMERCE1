@@ -21,14 +21,14 @@ const MobileResponsiveProduct = ({ selectedItem, product }) => {
                 pagination={{ clickable: true }}
                 spaceBetween={10}
                 slidesPerView={1}
-                className="h-full"
+                className="h-full overflow-hidden"
             >
                 {images.map((img, index) => (
                     <SwiperSlide key={index} className="flex justify-center items-center">
                         <img
                             src={img}
                             alt={`${product.title} ${index + 1}`}
-                            className="w-full h-80 object-cover"
+                            className="max-h-[250px] w-full object-contain"
                         />
                     </SwiperSlide>
                 ))}

@@ -29,7 +29,7 @@ const page = () => {
                                 />
                                 <div className='lg:p-4 p-2'>
                                     <h3 className='font-semibold block md:text-sm text-[12px] uppercase'>{item.title}</h3>
-                                    <span className='text-sm block mt-0 lg:mt-1.5'>{item.items[0].name}</span>
+                                    <span className='md:text-sm text-[10px] block mt-0 lg:mt-1.5'>{item.items[0].name}</span>
                                     <div className='relative flex gap-2 xl:flex-row flex-col justify-between mt-1.5'>
                                         <span className='block xl:hidden text-sm font-semibold'>{item.price}</span>
                                         <div className='flex gap-1 xl:gap-2'>

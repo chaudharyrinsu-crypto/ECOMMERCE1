@@ -71,7 +71,7 @@ const Header = () => {
                                     )}</button>
                                 </div>
                             </div>
-                            <div className={`bg-[#ECE9E2] text-[12px] space-x-7 lg:hidden block px-3 py-2 lg:px-5 lg:py-3 md:text-center ${category ? 'hidden' : 'block'} sm:whitespace-normal whitespace-nowrap sm:overflow-hidden overflow-x-scroll `}>
+                            <div className={`bg-[#ECE9E2] text-[12px] space-x-7 lg:hidden block px-3 py-2 lg:px-5 lg:py-3 md:text-center ${category ? 'hidden' : 'block'} sm:text-center sm:whitespace-normal whitespace-nowrap sm:overflow-hidden overflow-x-scroll `}>
                                 <Link href={`/collection/mens`}>MEN'S</Link>
                                 <Link href={`/collection/womens`}>WOMEN'S</Link>
                                 <Link href={`/collection/mens-new-arrivals`}>NEWARRIVALS</Link>

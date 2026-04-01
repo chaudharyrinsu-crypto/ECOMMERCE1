@@ -24,9 +24,21 @@ const page = () => {
 
     return (
         <>
-            <section className='bg-[#ECE9E2] h-[160vh] py-10 px-4 relative text-[#212121]'>
-                <div className=' md:relative md:block h-full'>
-                    <img className='h-187.5 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
+            <section className='bg-[#ECE9E2] h-[150vh] py-20 px-4 relative text-[#212121] flex lg:flex-row flex-col justify-around overflow-hidden w-full'>
+                <div className='lg:flex hidden flex-col justify-center'>
+                    <img className='max-h-[300px] max-w-[500px] border object-cover' src={selectedItem.firstimg} alt={product.title} />
+                    <div className='flex'>
+                        <img className='max-h-[250px] max-w-[250px] object-cover' src={selectedItem.secondimg} />
+                        <img className='max-h-[250px] max-w-[250px] object-cover' src={selectedItem.thirdimg} />
+                    </div>
+                    <div className='flex '>
+                        <img className='max-h-[250px] max-w-[250px] object-cover' src={selectedItem.fourthimg} />
+                        <img className='max-h-[250px] max-w-[250px] object-cover' src={selectedItem.fifthimg} />
+                    </div>
+                </div>
+
+                {/* <div className=' md:relative md:block h-full'>
+                    <img className='h-187 object-cover absolute -top-25' src={selectedItem.firstimg} alt={product.title} />
                     <div className='flex absolute top-100'>
                         <img className='h-95 object-cover' src={selectedItem.secondimg} />
                         <img className='h-95 object-cover' src={selectedItem.thirdimg} />
@@ -35,16 +47,71 @@ const page = () => {
                         <img className='object-cover h-95' src={selectedItem.fourthimg} />
                         <img className='h-95 object-cover' src={selectedItem.fifthimg} />
                     </div>
-                </div>
+                </div> */}
 
                 {/* for mobile */}
-                <div className='md:hidden block'>
+                <div className='lg:hidden block'>
                     <MobileResponsiveProduct selectedItem={selectedItem} product={product} />
                 </div>
+
                 {/* ***********************second white box*************************** */}
                 {/* <PageSecondBox product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} hexName={hexName} setHexName={setHexName} /> */}
 
-                <div className='absolute bg-white top-25 right-5 w-[40%] p-8 rounded-xl'>
+                <div className=' bg-white max-h-[700px] p-8 rounded-xl'>
+                    <div>
+                        <p className='text-2xl lg:text-3xl'>{product.title}</p>
+                        <p className='text-[#575757] py-1'>Also available in: Women's Sizes</p>
+                        <span className='inline-block font-semibold py-1'>{product.price}</span>
+                    </div>
+                    <div className='space-x-4 space-y-2 pt-5 text-sm md:text-[16px]'>
+                        <Link className='underline inline-block' href='/'>ALL</Link>
+                        <Link className='inline-block' href='/'>LIMITED</Link>
+                    </div>
+                    <span className='text-[#575757] md:text-[16px] text-sm'>{hexName.name}</span>
+                    <div className='grid grid-cols-5 gap-1 py-1'>
+                        {product.items.map((img, index) => (
+                            <button key={index} onClick={() => setSelectedItem(img)} onMouseEnter={() => setHexName(img)} className={`bg-[#F9F8F6] flex items-center justify-center ${selectedItem === img ? 'border-2 border-[#121212]' : 'border-none'} `}>
+                                <img className='h-15 object-contain cursor-pointer w-full' src={img.firstimg} alt="firstimg" />
+                            </button>
+                        ))}
+                    </div>
+                    <div >
+                        <div className='uppercase pt-5 space-x-2 text-sm'>
+                            <Link className='underline' href='/'>Men's Sizes</Link>
+                            <Link href='/'>Women's Sizes</Link>
+                        </div>
+                        <div className='grid grid-cols-7 gap-1 sm:gap-2 py-4'>
+                            {product.sizes.map((size, index) => (
+                                <button key={index} onClick={() => setSelectSize(size)} className={` flex items-center justify-center text-sm p-3 tracking-tighter cursor-pointer ${selectSize === size ? 'bg-[#121212] border-none text-white' : 'border border-[#E0DACF]'}`}>{size}</button>
+                            ))}
+                        </div>
+                        <div className='text-[#575757] pb-6 text-sm'>
+                            <p>The Dasher NZ fits true-to-size for most customers.</p>
+                            <Link className='underline' href='/'>Fit Guide</Link>
+                        </div>
+                    </div>
+                    <div className='pb-12'>
+                        <button onClick={() => {
+                            dispatch({
+                                type: "ADD_TO_CART",
+                                payload: {
+                                    id: product.id,
+                                    name: product.title,
+                                    price: product.price,
+                                    size: selectSize,
+                                    color: selectedItem.name,
+                                    image: selectedItem.firstimg
+                                }
+                            })
+                            dispatch({ type: 'OPEN_CART' })
+                        }} className={`w-full py-4 rounded-full text-sm text-center ${selectSize ? 'bg-[#121212] text-white cursor-auto' : 'cursor-not-allowed border border-[#D1D5DC] bg-[#E7E5EB]'}`}>{selectSize ? 'ADD TO CART -' : 'SELECT A SIZE'} {selectSize && product.price}</button>
+                    </div>
+                    <div className='text-[#575757] text-sm text-center'>
+                        <span className='block'>Free Shipping on Orders over $75</span>
+                        <span>Easy Returns</span>
+                    </div>
+                </div>
+                {/* <div className='absolute bg-white top-25 right-5 w-[40%] p-8 rounded-xl'>
                     <div>
                         <p className='text-3xl'>{product.title}</p>
                         <p className='text-[#575757] py-1'>Also available in: Women's Sizes</p>
@@ -97,9 +164,12 @@ const page = () => {
                         <span className='block'>Free Shipping on Orders over $75</span>
                         <span>Easy Returns</span>
                     </div>
-                </div>
+                </div> */}
+
+
+
             </section>
-            <section className='px-3 bg-[#ECE9E2]'>
+            <section className='px-3 bg-[#ECE9E2] text-[#212121]'>
                 {product.title.toLowerCase().includes('terralux') && (
                     <>
                         <Decription />
@@ -107,7 +177,7 @@ const page = () => {
                     </>
                 )}
             </section>
-            <section className='bg-[#ECE9E2]'>
+            <section className='bg-[#ECE9E2] text-[#212121]'>
                 <>
                     <Features product={product} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
                     <YouMayLikeItem />
